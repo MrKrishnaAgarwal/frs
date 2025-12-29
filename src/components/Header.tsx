@@ -35,9 +35,11 @@ const Header = () => {
           </nav>
 
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="outline" size="sm">
-              View Sample FRS
-            </Button>
+            <a href="/u/FRS-IND-2026-001786">
+              <Button variant="outline" size="sm">
+                View Sample FRS
+              </Button>
+            </a>
             <Button size="sm">Partner With Us</Button>
           </div>
 
