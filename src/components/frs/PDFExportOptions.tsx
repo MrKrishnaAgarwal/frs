@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { ArrowLeft, FileDown, AlertCircle, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import QRCodeComponent from "qrcode.react";
+import { QRCodeCanvas } from "qrcode.react";
 import { logShareAction, generateFRSLitePDF, generateFRSFullPDF } from "@/lib/share-utils";
 
 interface PDFExportOptionsProps {
