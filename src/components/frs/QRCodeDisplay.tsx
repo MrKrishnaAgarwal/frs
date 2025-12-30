@@ -2,14 +2,7 @@ import { useState, useRef } from "react";
 import { ArrowLeft, Download, Copy, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { logShareAction, copyToClipboard } from "@/lib/share-utils";
-
-// Dynamic import wrapper for QRCode
-let QRCode: any = null;
-import("qrcode.react").then((module) => {
-  QRCode = module.default || module;
-}).catch((err) => {
-  console.error("Failed to load QRCode:", err);
-});
+import QRCodeComponent from "qrcode.react";
 
 interface QRCodeDisplayProps {
   url: string;
