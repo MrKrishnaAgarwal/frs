@@ -50,13 +50,15 @@ export default function QRCodeDisplay({ url, frsId, onBack }: QRCodeDisplayProps
       </button>
 
       <div className="bg-white rounded-lg p-6 flex justify-center" ref={qrRef}>
-        <QRCode
-          value={url}
-          size={256}
-          level="H"
-          includeMargin={true}
-          renderAs="canvas"
-        />
+        <Suspense fallback={<div className="w-64 h-64 bg-gray-200 rounded flex items-center justify-center">Generating QR...</div>}>
+          <QRCode
+            value={url}
+            size={256}
+            level="H"
+            includeMargin={true}
+            renderAs="canvas"
+          />
+        </Suspense>
       </div>
 
       <div className="bg-secondary/50 rounded-lg p-3 text-center">
