@@ -2,7 +2,9 @@ import { useState, useRef } from "react";
 import { ArrowLeft, Download, Copy, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { logShareAction, copyToClipboard } from "@/lib/share-utils";
-import QRCode from "qrcode.react";
+import * as QRCodeLib from "qrcode.react";
+
+const QRCode = QRCodeLib.default || QRCodeLib;
 
 interface QRCodeDisplayProps {
   url: string;
