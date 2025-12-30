@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import anveshLogo from "@/assets/anvesh-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,9 +17,12 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <a href="/" className="flex items-center gap-2">
-            <span className="text-2xl font-bold text-primary">ANVESH</span>
-            <span className="text-2xl font-bold text-foreground">.AI</span>
+          <a href="/" className="flex items-center gap-1.5">
+            <img src={anveshLogo} alt="Anvesh.ai" className="w-8 h-8" />
+            <span className="text-2xl font-bold">
+              <span className="text-primary">Anvesh</span>
+              <span className="text-foreground">.ai</span>
+            </span>
           </a>
 
           {/* Desktop Navigation */}

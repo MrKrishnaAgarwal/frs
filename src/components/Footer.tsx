@@ -1,4 +1,5 @@
 import { Shield } from "lucide-react";
+import anveshLogo from "@/assets/anvesh-logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,9 +12,12 @@ const Footer = () => {
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             {/* Brand */}
             <div className="md:col-span-2">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="text-2xl font-bold text-primary">ANVESH</span>
-                <span className="text-2xl font-bold text-foreground">.AI</span>
+              <div className="flex items-center gap-1.5 mb-4">
+                <img src={anveshLogo} alt="Anvesh.ai" className="w-8 h-8" />
+                <span className="text-2xl font-bold">
+                  <span className="text-primary">Anvesh</span>
+                  <span className="text-foreground">.ai</span>
+                </span>
               </div>
               <p className="text-muted-foreground mb-6 max-w-sm">
                 Issuer and steward of the Future Ready Score framework. Building national readiness infrastructure for India's learners.
@@ -88,7 +92,7 @@ const Footer = () => {
 
           {/* Bottom Bar */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-            <p>© {currentYear} ANVESH.AI. All rights reserved.</p>
+            <p>© {currentYear} Anvesh.ai. All rights reserved.</p>
             <div className="flex items-center gap-6">
               <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-foreground transition-colors">Terms of Use</a>
