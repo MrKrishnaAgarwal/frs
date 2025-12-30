@@ -1,8 +1,10 @@
 import { useState, useRef } from "react";
 import { ArrowLeft, FileDown, AlertCircle, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import QRCode from "qrcode.react";
+import * as QRCodeLib from "qrcode.react";
 import { logShareAction, generateFRSLitePDF, generateFRSFullPDF } from "@/lib/share-utils";
+
+const QRCode = QRCodeLib.default || QRCodeLib;
 
 interface PDFExportOptionsProps {
   frsId: string;
