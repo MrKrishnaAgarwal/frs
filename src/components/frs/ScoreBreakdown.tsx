@@ -90,7 +90,7 @@ const ScoreBreakdown = () => {
       ],
     },
     {
-      name: "Skills & Competencies",
+      name: t("scoreBreakdown.skillsCompetencies"),
       icon: Wrench,
       score: 224,
       maxScore: 300,
@@ -103,7 +103,7 @@ const ScoreBreakdown = () => {
       ],
     },
     {
-      name: "Growth & Effort",
+      name: t("scoreBreakdown.trajectoryMomentum"),
       icon: TrendingUp,
       score: 115,
       maxScore: 150,
