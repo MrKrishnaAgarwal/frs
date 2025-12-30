@@ -1,12 +1,15 @@
 import { User, GraduationCap, MapPin, Languages, CheckCircle, Shield } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { useTranslation } from "react-i18next";
 
 const StudentProfile = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="bg-card border border-border rounded-lg p-6">
       <h3 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
         <User className="w-5 h-5 text-primary" />
-        Student Profile
+        {t("studentProfile.title")}
       </h3>
 
       <div className="space-y-4">
