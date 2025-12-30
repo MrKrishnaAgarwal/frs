@@ -1,8 +1,9 @@
-import { useState, useRef } from "react";
+import { useState, useRef, lazy, Suspense } from "react";
 import { ArrowLeft, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import QRCode from "qrcode.react";
 import { logShareAction } from "@/lib/share-utils";
+
+const QRCode = lazy(() => import("qrcode.react"));
 
 interface QRCodeDisplayProps {
   url: string;
