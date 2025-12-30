@@ -115,7 +115,7 @@ const ScoreBreakdown = () => {
       ],
     },
     {
-      name: "Exposure & Enrichment",
+      name: t("scoreBreakdown.exposureEnrichment", "Exposure & Enrichment"),
       icon: Sprout,
       score: 101,
       maxScore: 150,
