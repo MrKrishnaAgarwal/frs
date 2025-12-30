@@ -140,13 +140,13 @@ export default function QRCodeDisplay({ url, frsId, onBack }: QRCodeDisplayProps
           Download QR Code
         </label>
         <Button
-          onClick={() => downloadQR('png')}
+          onClick={downloadQR}
           disabled={isDownloading}
           variant="outline"
           className="w-full gap-2 border-primary/30 hover:border-primary/50 bg-primary/5 hover:bg-primary/10"
         >
           <Download className="w-4 h-4" />
-          {isDownloading && downloadFormat === 'png' ? 'Downloading...' : 'Download as PNG'}
+          {isDownloading ? 'Downloading...' : 'Download as PNG'}
         </Button>
       </div>
 
