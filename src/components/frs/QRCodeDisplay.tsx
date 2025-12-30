@@ -3,8 +3,13 @@ import { ArrowLeft, Download, Copy, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { logShareAction, copyToClipboard } from "@/lib/share-utils";
 
-// Use require to handle the module properly
-const QRCode = require("qrcode.react").default;
+// Dynamic import wrapper for QRCode
+let QRCode: any = null;
+import("qrcode.react").then((module) => {
+  QRCode = module.default || module;
+}).catch((err) => {
+  console.error("Failed to load QRCode:", err);
+});
 
 interface QRCodeDisplayProps {
   url: string;
