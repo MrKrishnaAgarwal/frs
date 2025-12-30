@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { X, Copy, Check, FileDown, QrCode as QrCodeIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useTranslation } from "react-i18next";
 import { canSharePublicly, copyToClipboard, logShareAction, getFRSLiteUrl } from "@/lib/share-utils";
 import QRCodeDisplay from "./QRCodeDisplay";
