@@ -17,6 +17,7 @@ import CareerAlignment from "@/components/frs/CareerAlignment";
 import ShareValidation from "@/components/frs/ShareValidation";
 import AnimatedSection from "@/components/frs/AnimatedSection";
 import LanguageSelector from "@/components/frs/LanguageSelector";
+import ShareButton from "@/components/frs/ShareButton";
 import anveshLogo from "@/assets/anvesh-logo.png";
 
 declare global {
