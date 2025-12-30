@@ -1,5 +1,6 @@
 import { BookOpen, Wrench, TrendingUp, Sprout } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { cn } from "@/lib/utils";
 
@@ -72,9 +73,11 @@ const getScoreColor = (percentage: number) => {
 };
 
 const ScoreBreakdown = () => {
+  const { t } = useTranslation();
+
   const categories: ScoreCategory[] = [
     {
-      name: "Academic Foundation",
+      name: t("scoreBreakdown.academicFoundation"),
       icon: BookOpen,
       score: 318,
       maxScore: 400,
@@ -87,7 +90,7 @@ const ScoreBreakdown = () => {
       ],
     },
     {
-      name: "Skills & Competencies",
+      name: t("scoreBreakdown.skillsCompetencies"),
       icon: Wrench,
       score: 224,
       maxScore: 300,
@@ -100,7 +103,7 @@ const ScoreBreakdown = () => {
       ],
     },
     {
-      name: "Growth & Effort",
+      name: t("scoreBreakdown.trajectoryMomentum"),
       icon: TrendingUp,
       score: 115,
       maxScore: 150,
@@ -112,7 +115,7 @@ const ScoreBreakdown = () => {
       ],
     },
     {
-      name: "Exposure & Enrichment",
+      name: t("scoreBreakdown.exposureEnrichment", "Exposure & Enrichment"),
       icon: Sprout,
       score: 101,
       maxScore: 150,
@@ -129,7 +132,7 @@ const ScoreBreakdown = () => {
     <div className="space-y-6">
       <h3 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
         <span className="w-1.5 h-6 bg-primary rounded-full animate-pulse" />
-        Score Breakdown
+        {t("scoreBreakdown.title")}
       </h3>
 
       <div className="grid gap-4">

@@ -1,0 +1,79 @@
+{
+  "common": {
+    "backToHome": "होम पर वापस जाएं",
+    "selectLanguage": "भाषा चुनें"
+  },
+  "report": {
+    "title": "भविष्य तैयारी स्कोर रिपोर्ट",
+    "subtitle": "सीखने, कौशल और मार्ग के लिए एक समग्र तैयारी संकेतक",
+    "frsId": "FRS आईडी",
+    "lastUpdated": "अंतिम अपडेट",
+    "consentStatus": "सहमति की स्थिति"
+  },
+  "header": {
+    "futureReadyScore": "भविष्य तैयारी स्कोर (0–1000)",
+    "holisticReadiness": "सीखने, कौशल और मार्ग के लिए समग्र तैयारी संकेतक"
+  },
+  "studentProfile": {
+    "title": "छात्र की प्रोफाइल",
+    "ageClass": "आयु / कक्षा",
+    "boardStream": "बोर्ड / विषय",
+    "school": "स्कूल",
+    "languages": "भाषाएं",
+    "region": "क्षेत्र",
+    "status": "सक्रिय"
+  },
+  "scoreGauge": {
+    "futureReady": "भविष्य-तैयार",
+    "ready": "तैयार",
+    "emerging": "उभरता हुआ",
+    "developing": "विकासशील",
+    "consistentGrowth": "सतत विकास और लागू सहभागिता",
+    "indicator": "शैक्षणिक, कौशल और कैरियर तैयारी का एक गतिशील संकेतक।"
+  },
+  "scoreBreakdown": {
+    "title": "स्कोर विभाजन",
+    "academicFoundation": "शैक्षणिक आधार",
+    "skillsCompetencies": "कौशल और दक्षताएं",
+    "trajectoryMomentum": "वृद्धि और प्रयास",
+    "exposureEnrichment": "संपर्क और संवर्धन",
+    "identityFidelity": "पहचान और निष्ठा",
+    "socialReadiness": "सामाजिक तैयारी",
+    "careerAlignment": "कैरियर संरेखण"
+  },
+  "context": {
+    "title": "संदर्भ"
+  },
+  "badges": {
+    "nepAligned": "NEP-संरेखित",
+    "explainable": "व्याख्यायोग्य",
+    "privacyFirst": "गोपनीयता-प्रथम"
+  },
+  "share": {
+    "button": "FRS साझा करें",
+    "title": "अपना FRS साझा करें",
+    "description": "अपने भविष्य तैयारी स्कोर को संस्थानों और सलाहकारों के साथ सुरक्षित रूप से साझा करें।",
+    "descriptionDisabled": "सार्वजनिक साझाकरण आपकी गोपनीयता सेटिंग्स में वर्तमान में अक्षम है।",
+    "copyLink": "साझा लिंक कॉपी करें",
+    "copyLinkDesc": "केवल सारांश दृश्य। प्राप्तकर्ता को पहुंच को मंजूरी देनी होगी।",
+    "copied": "क्लिपबोर्ड पर कॉपी किया गया",
+    "qrCode": "QR कोड जेनरेट करें",
+    "qrCodeDesc": "सारांश दृश्य तक तत्काल पहुंच के लिए QR साझा करें।",
+    "qrNote": "QR केवल अनुमोदित सारांश दृश्य दिखाता है।",
+    "downloadQRPng": "QR डाउनलोड करें (PNG)",
+    "downloadQRPdf": "QR डाउनलोड करें (PDF)",
+    "downloadPDF": "PDF डाउनलोड करें",
+    "downloadPDFDesc": "PDF के रूप में निर्यात करें (Lite या पूर्ण रिपोर्ट)।",
+    "pdfLite": "FRS Lite (1 पृष्ठ)",
+    "pdfLiteDesc": "स्कोर, बैंड, प्रक्षेपवक्र और सत्यापन स्थिति के साथ सारांश दृश्य।",
+    "pdfFull": "पूर्ण FRS रिपोर्ट",
+    "pdfFullDesc": "सभी अनुभागों और विस्तृत विश्लेषण के साथ संपूर्ण रिपोर्ट।",
+    "pdfLiteVerified": "सत्यापन-समर्थित सारांश",
+    "pdfFullAvailable": "केवल छात्र डाउनलोड के लिए उपलब्ध (जल्द आ रहा है)",
+    "exportingPdf": "PDF तैयार हो रहा है...",
+    "exportPdf": "FRS Lite PDF डाउनलोड करें",
+    "pdfLiteNote": "FRS Lite PDF में लाइव FRS पृष्ठ तक तत्काल पहुंच के लिए QR कोड शामिल है।",
+    "footerNote": "सभी शेयर आपकी सहमति इतिहास में लॉग और ट्रैक किए जाते हैं। आप पूर्ण नियंत्रण बनाए रखते हैं।",
+    "publicDisabled": "सार्वजनिक साझाकरण वर्तमान में अक्षम है। साझा करने के लिए गोपनीयता सेटिंग्स में इसे सक्षम करें।"
+  }
+}

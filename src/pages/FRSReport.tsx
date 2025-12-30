@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { ArrowLeft, Scale, Globe } from "lucide-react";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 import ReportHeader from "@/components/frs/ReportHeader";
 import StudentProfile from "@/components/frs/StudentProfile";
@@ -15,6 +16,8 @@ import ActionableInsights from "@/components/frs/ActionableInsights";
 import CareerAlignment from "@/components/frs/CareerAlignment";
 import ShareValidation from "@/components/frs/ShareValidation";
 import AnimatedSection from "@/components/frs/AnimatedSection";
+import LanguageSelector from "@/components/frs/LanguageSelector";
+import ShareButton from "@/components/frs/ShareButton";
 import anveshLogo from "@/assets/anvesh-logo.png";
 
 declare global {
@@ -27,6 +30,7 @@ declare global {
 const FRSReport = () => {
   const { frsId } = useParams();
   const displayId = frsId || "FRS-IND-2026-001786";
+  const { t } = useTranslation();
 
   useEffect(() => {
     // Initialize Google Translate
@@ -82,14 +86,14 @@ const FRSReport = () => {
                 {/* Language Selector */}
                 <div className="flex items-center gap-2">
                   <Globe className="w-4 h-4 text-muted-foreground" />
-                  <div id="google_translate_element" className="translate-widget" />
+                  <LanguageSelector />
                 </div>
                 <a
                   href="/"
                   className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
                   <ArrowLeft className="w-4 h-4" />
-                  <span className="hidden sm:inline">Back to Home</span>
+                  <span className="hidden sm:inline">{t("common.backToHome")}</span>
                 </a>
               </div>
             </div>
@@ -123,12 +127,19 @@ const FRSReport = () => {
                     <ScoreGauge
                       score={758}
                       maxScore={1000}
-                      band="FUTURE-READY"
-                      bandDescription="Consistent Growth & Applied Engagement"
+                      band={t("scoreGauge.futureReady")}
+                      bandDescription={t("scoreGauge.consistentGrowth")}
                     />
                     <p className="text-center text-sm text-muted-foreground mt-4 max-w-sm">
-                      A dynamic indicator of academic, skill, and career readiness.
+                      {t("scoreGauge.indicator")}
                     </p>
+                    <div className="mt-6 pt-4 border-t border-border w-full flex justify-center">
+                      <ShareButton
+                        frsId={displayId}
+                        score={758}
+                        isPublicVisible={true}
+                      />
+                    </div>
                   </div>
                 </AnimatedSection>
               </div>

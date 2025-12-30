@@ -3,7 +3,7 @@ import { Info, CheckCircle, AlertTriangle } from "lucide-react";
 const ContextSection = () => {
   const contextItems = [
     { label: "Learning Support Preferences", status: "Considered", active: true },
-    { label: "Learning Pace Variability", status: "Acknowledged", active: true },
+    { label: "Financial Aid", status: "Acknowledged", active: true },
     { label: "School Infrastructure Index", status: "Medium", active: true },
   ];
 

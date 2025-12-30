@@ -1,0 +1,80 @@
+{
+  "common": {
+    "backToHome": "Back to Home",
+    "selectLanguage": "Select Language"
+  },
+  "report": {
+    "title": "Future Ready Score Report",
+    "subtitle": "A holistic readiness indicator for learning, skills, and pathways",
+    "frsId": "FRS ID",
+    "lastUpdated": "Last Updated",
+    "consentStatus": "Consent Status"
+  },
+  "header": {
+    "futureReadyScore": "Future Ready Score (0–1000)",
+    "holisticReadiness": "Holistic readiness indicator for learning, skills, and pathways"
+  },
+  "studentProfile": {
+    "title": "Student Profile",
+    "ageClass": "Age / Class",
+    "boardStream": "Board / Stream",
+    "school": "School",
+    "languages": "Languages",
+    "region": "Region",
+    "status": "Active"
+  },
+  "scoreGauge": {
+    "futureReady": "FUTURE-READY",
+    "ready": "READY",
+    "emerging": "EMERGING",
+    "developing": "DEVELOPING",
+    "consistentGrowth": "Consistent Growth & Applied Engagement",
+    "indicator": "A dynamic indicator of academic, skill, and career readiness."
+  },
+  "scoreBreakdown": {
+    "title": "Score Breakdown",
+    "academicFoundation": "Academic Foundation",
+    "skillsCompetencies": "Skills & Competencies",
+    "trajectoryMomentum": "Growth & Effort",
+    "exposureEnrichment": "Exposure & Enrichment",
+    "identityFidelity": "Identity & Fidelity",
+    "socialReadiness": "Social Readiness",
+    "careerAlignment": "Career Alignment"
+  },
+  "context": {
+    "title": "Context"
+  },
+  "badges": {
+    "nepAligned": "NEP-Aligned",
+    "explainable": "Explainable",
+    "privacyFirst": "Privacy-First"
+  },
+  "share": {
+    "button": "Share FRS",
+    "title": "Share Your FRS",
+    "description": "Share your Future Ready Score securely with institutions and mentors.",
+    "descriptionDisabled": "Public sharing is currently disabled in your privacy settings.",
+    "copyLink": "Copy Share Link",
+    "copyLinkDesc": "Summary view only. Recipient must approve access.",
+    "copied": "Copied to Clipboard",
+    "qrCode": "Generate QR Code",
+    "qrCodeDesc": "Share via QR for instant access to summary view.",
+    "qrNote": "QR shows a consented summary view only.",
+    "downloadQRPng": "Download QR (PNG)",
+    "downloadQRPdf": "Download QR (PDF)",
+    "downloadPDF": "Download PDF",
+    "downloadPDFDesc": "Export as PDF (Lite or Full report).",
+    "pdfLite": "FRS Lite (1 Page)",
+    "pdfLiteDesc": "Summary view with score, band, trajectory, and verification status.",
+    "pdfFull": "Full FRS Report",
+    "pdfFullDesc": "Complete report with all sections and detailed analysis.",
+    "pdfLiteVerified": "Verification-backed summary",
+    "pdfFullAvailable": "Available only for student download (coming soon)",
+    "exportingPdf": "Generating PDF...",
+    "exportPdf": "Download FRS Lite PDF",
+    "pdfLiteNote": "FRS Lite PDF includes QR code for instant access to live FRS page.",
+    "fullExportWarning": "You are exporting your full FRS report. This contains detailed information about your academic, skill, and career readiness. Full reports are for your records only.",
+    "footerNote": "All shares are logged and tracked in your Consent History. You maintain full control.",
+    "publicDisabled": "Public sharing is currently disabled. Enable it in Privacy Settings to share."
+  }
+}
