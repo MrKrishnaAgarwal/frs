@@ -73,23 +73,14 @@ export default function QRCodeDisplay({ url, frsId, onBack }: QRCodeDisplayProps
           className="bg-white rounded-lg p-8 border-2 border-primary/30 shadow-lg"
           ref={qrRef}
         >
-          <Suspense fallback={
-            <div className="w-64 h-64 bg-gray-200 rounded flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-8 h-8 border-2 border-gray-400 border-t-gray-600 rounded-full animate-spin mx-auto mb-2"></div>
-                <p className="text-sm text-gray-600">Generating QR...</p>
-              </div>
-            </div>
-          }>
-            <QRCode
-              value={url}
-              size={256}
-              level="H"
-              includeMargin={true}
-              renderAs="canvas"
-              quietZone={10}
-            />
-          </Suspense>
+          <QRCode
+            value={url}
+            size={256}
+            level="H"
+            includeMargin={true}
+            renderAs="canvas"
+            quietZone={10}
+          />
         </div>
 
         {/* Security Info */}
