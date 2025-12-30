@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { ArrowLeft, Scale, Globe } from "lucide-react";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 import ReportHeader from "@/components/frs/ReportHeader";
 import StudentProfile from "@/components/frs/StudentProfile";
@@ -15,6 +16,7 @@ import ActionableInsights from "@/components/frs/ActionableInsights";
 import CareerAlignment from "@/components/frs/CareerAlignment";
 import ShareValidation from "@/components/frs/ShareValidation";
 import AnimatedSection from "@/components/frs/AnimatedSection";
+import LanguageSelector from "@/components/frs/LanguageSelector";
 import anveshLogo from "@/assets/anvesh-logo.png";
 
 declare global {
