@@ -1,9 +1,10 @@
-import { useState, useRef, lazy, Suspense } from "react";
+import { useState, useRef } from "react";
 import { ArrowLeft, Download, Copy, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { logShareAction, copyToClipboard } from "@/lib/share-utils";
 
-const QRCode = lazy(() => import("qrcode.react").then(module => ({ default: module.default || module })));
+// Use require to handle the module properly
+const QRCode = require("qrcode.react").default;
 
 interface QRCodeDisplayProps {
   url: string;
