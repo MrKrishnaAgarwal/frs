@@ -192,12 +192,11 @@ export default function PDFExportOptions({ frsId, score, onBack }: PDFExportOpti
 
       {/* Hidden QR for PDF generation */}
       <div className="hidden" ref={qrRef}>
-        <QRCodeComponent
+        <QRCodeCanvas
           value={`https://anvesh.ai/u/${frsId}`}
           size={200}
           level="H"
           includeMargin={true}
-          renderAs="canvas"
         />
       </div>
 
