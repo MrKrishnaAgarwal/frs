@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { ArrowLeft, Download, FileText } from "lucide-react";
+import { ArrowLeft, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import QRCode from "qrcode.react";
 import { logShareAction } from "@/lib/share-utils";
@@ -14,42 +14,23 @@ export default function QRCodeDisplay({ url, frsId, onBack }: QRCodeDisplayProps
   const qrRef = useRef<HTMLDivElement>(null);
   const [isDownloading, setIsDownloading] = useState(false);
 
-  const downloadQR = async (format: 'png' | 'pdf') => {
+  const downloadQR = async (format: 'png' | 'jpg') => {
     setIsDownloading(true);
-    const element = qrRef.current?.querySelector('canvas');
-
-    if (!element) {
-      setIsDownloading(false);
-      return;
-    }
-
     try {
-      if (format === 'png') {
+      const element = qrRef.current?.querySelector('canvas') as HTMLCanvasElement;
+      if (element) {
         const link = document.createElement('a');
         link.href = element.toDataURL('image/png');
         link.download = `FRS-${frsId}-QR.png`;
         link.click();
-      } else if (format === 'pdf') {
-        // For PDF, create a simple PDF with the canvas
-        const canvas = qrRef.current?.querySelector('canvas') as HTMLCanvasElement;
-        if (canvas) {
-          const link = document.createElement('a');
-          link.href = canvas.toDataURL('image/png');
-          link.download = `FRS-${frsId}-QR.pdf`;
-          // In production, would use proper PDF library to create actual PDF
-          // For now, convert to PNG as placeholder
-          link.href = canvas.toDataURL('image/png');
-          link.download = `FRS-${frsId}-QR.png`;
-          link.click();
-        }
-      }
 
-      logShareAction({
-        action: 'qr',
-        timestamp: new Date().toISOString(),
-        visibilityLevel: 'lite',
-        frsId,
-      });
+        logShareAction({
+          action: 'qr',
+          timestamp: new Date().toISOString(),
+          visibilityLevel: 'lite',
+          frsId,
+        });
+      }
     } catch (error) {
       console.error('Failed to download QR:', error);
     } finally {
@@ -94,13 +75,13 @@ export default function QRCodeDisplay({ url, frsId, onBack }: QRCodeDisplayProps
           Download QR (PNG)
         </Button>
         <Button
-          onClick={() => downloadQR('pdf')}
+          onClick={() => downloadQR('jpg')}
           disabled={isDownloading}
           variant="outline"
           className="w-full gap-2"
         >
-          <FileText className="w-4 h-4" />
-          Download QR (PDF)
+          <Download className="w-4 h-4" />
+          Download QR (JPG)
         </Button>
       </div>
 
