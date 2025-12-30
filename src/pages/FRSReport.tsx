@@ -29,6 +29,7 @@ declare global {
 const FRSReport = () => {
   const { frsId } = useParams();
   const displayId = frsId || "FRS-IND-2026-001786";
+  const { t } = useTranslation();
 
   useEffect(() => {
     // Initialize Google Translate
