@@ -143,14 +143,14 @@ const ScoreGauge = ({ score, maxScore, bandDescription }: ScoreGaugeProps) => {
         </svg>
 
         {/* Score display - centered in the arc */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center" style={{ paddingTop: '40px' }}>
-          <div 
-            className="text-5xl md:text-6xl font-bold tabular-nums transition-colors duration-500"
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center whitespace-nowrap">
+          <div
+            className="text-5xl md:text-6xl font-bold tabular-nums transition-colors duration-500 leading-none"
             style={{ color: scoreColor }}
           >
             {animatedScore}
           </div>
-          <div className="text-base text-muted-foreground mt-1">/ {maxScore}</div>
+          <div className="text-sm text-muted-foreground mt-2">/ {maxScore}</div>
         </div>
       </div>
 
