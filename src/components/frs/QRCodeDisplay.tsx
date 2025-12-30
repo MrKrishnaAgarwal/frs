@@ -73,12 +73,11 @@ export default function QRCodeDisplay({ url, frsId, onBack }: QRCodeDisplayProps
           className="bg-white rounded-lg p-8 border-2 border-primary/30 shadow-lg"
           ref={qrRef}
         >
-          <QRCodeComponent
+          <QRCodeCanvas
             value={url}
             size={256}
             level="H"
             includeMargin={true}
-            renderAs="canvas"
             quietZone={10}
           />
         </div>
