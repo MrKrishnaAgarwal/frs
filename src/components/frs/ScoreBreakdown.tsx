@@ -73,9 +73,11 @@ const getScoreColor = (percentage: number) => {
 };
 
 const ScoreBreakdown = () => {
+  const { t } = useTranslation();
+
   const categories: ScoreCategory[] = [
     {
-      name: "Academic Foundation",
+      name: t("scoreBreakdown.academicFoundation"),
       icon: BookOpen,
       score: 318,
       maxScore: 400,
