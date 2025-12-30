@@ -133,6 +133,13 @@ const FRSReport = () => {
                     <p className="text-center text-sm text-muted-foreground mt-4 max-w-sm">
                       {t("scoreGauge.indicator")}
                     </p>
+                    <div className="mt-6 pt-4 border-t border-border w-full flex justify-center">
+                      <ShareButton
+                        frsId={displayId}
+                        score={758}
+                        isPublicVisible={true}
+                      />
+                    </div>
                   </div>
                 </AnimatedSection>
               </div>
