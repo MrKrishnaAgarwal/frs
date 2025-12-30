@@ -1,10 +1,9 @@
-import { useState, useRef } from "react";
+import { useState, useRef, lazy, Suspense } from "react";
 import { ArrowLeft, Download, Copy, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { logShareAction, copyToClipboard } from "@/lib/share-utils";
-import * as QRCodeLib from "qrcode.react";
 
-const QRCode = QRCodeLib.default || QRCodeLib;
+const QRCode = lazy(() => import("qrcode.react").then(module => ({ default: module.default || module })));
 
 interface QRCodeDisplayProps {
   url: string;
