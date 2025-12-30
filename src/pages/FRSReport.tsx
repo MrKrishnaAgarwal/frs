@@ -126,11 +126,11 @@ const FRSReport = () => {
                     <ScoreGauge
                       score={758}
                       maxScore={1000}
-                      band="FUTURE-READY"
-                      bandDescription="Consistent Growth & Applied Engagement"
+                      band={t("scoreGauge.futureReady")}
+                      bandDescription={t("scoreGauge.consistentGrowth")}
                     />
                     <p className="text-center text-sm text-muted-foreground mt-4 max-w-sm">
-                      A dynamic indicator of academic, skill, and career readiness.
+                      {t("scoreGauge.indicator")}
                     </p>
                   </div>
                 </AnimatedSection>
