@@ -19,7 +19,7 @@ const StudentProfile = () => {
           <div className="flex items-center gap-2 mt-1">
             <Badge variant="outline" className="text-xs border-primary/30 text-primary">
               <CheckCircle className="w-3 h-3 mr-1" />
-              Active
+              {t("studentProfile.status")}
             </Badge>
           </div>
         </div>
