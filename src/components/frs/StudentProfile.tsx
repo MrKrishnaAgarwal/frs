@@ -29,19 +29,19 @@ const StudentProfile = () => {
         {/* Details Grid */}
         <div className="space-y-3">
           <div className="flex items-center justify-between">
-            <span className="text-sm text-muted-foreground">Age / Class</span>
+            <span className="text-sm text-muted-foreground">{t("studentProfile.ageClass")}</span>
             <span className="text-sm font-medium text-foreground">17 yrs | Class 12</span>
           </div>
 
           <div className="flex items-center justify-between">
-            <span className="text-sm text-muted-foreground">Board / Stream</span>
+            <span className="text-sm text-muted-foreground">{t("studentProfile.boardStream")}</span>
             <span className="text-sm font-medium text-foreground">CBSE | Science</span>
           </div>
 
           <div className="flex items-start justify-between">
             <span className="text-sm text-muted-foreground flex items-center gap-1">
               <GraduationCap className="w-4 h-4" />
-              School
+              {t("studentProfile.school")}
             </span>
             <span className="text-sm font-medium text-foreground text-right max-w-[160px]">
               Kendriya Vidyalaya, Noida
@@ -51,7 +51,7 @@ const StudentProfile = () => {
           <div className="flex items-center justify-between">
             <span className="text-sm text-muted-foreground flex items-center gap-1">
               <Languages className="w-4 h-4" />
-              Languages
+              {t("studentProfile.languages")}
             </span>
             <span className="text-sm font-medium text-foreground">Hindi, English</span>
           </div>
@@ -59,7 +59,7 @@ const StudentProfile = () => {
           <div className="flex items-center justify-between">
             <span className="text-sm text-muted-foreground flex items-center gap-1">
               <MapPin className="w-4 h-4" />
-              Region
+              {t("studentProfile.region")}
             </span>
             <span className="text-sm font-medium text-foreground">Uttar Pradesh</span>
           </div>
