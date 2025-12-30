@@ -1,10 +1,8 @@
-import { useState, useRef, lazy, Suspense } from "react";
+import { useState, useRef } from "react";
 import { ArrowLeft, FileDown, AlertCircle, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useTranslation } from "react-i18next";
+import QRCode from "qrcode.react";
 import { logShareAction, generateFRSLitePDF, generateFRSFullPDF } from "@/lib/share-utils";
-
-const QRCode = lazy(() => import("qrcode.react"));
 
 interface PDFExportOptionsProps {
   frsId: string;
