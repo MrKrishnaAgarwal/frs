@@ -1,5 +1,6 @@
 import { BookOpen, Wrench, TrendingUp, Sprout } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { cn } from "@/lib/utils";
 
