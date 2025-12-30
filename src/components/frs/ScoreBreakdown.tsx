@@ -132,7 +132,7 @@ const ScoreBreakdown = () => {
     <div className="space-y-6">
       <h3 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
         <span className="w-1.5 h-6 bg-primary rounded-full animate-pulse" />
-        Score Breakdown
+        {t("scoreBreakdown.title")}
       </h3>
 
       <div className="grid gap-4">
