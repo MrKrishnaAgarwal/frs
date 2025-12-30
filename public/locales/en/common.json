@@ -35,10 +35,11 @@
     "title": "Score Breakdown",
     "academicFoundation": "Academic Foundation",
     "skillsCompetencies": "Skills & Competencies",
+    "trajectoryMomentum": "Growth & Effort",
+    "exposureEnrichment": "Exposure & Enrichment",
     "identityFidelity": "Identity & Fidelity",
     "socialReadiness": "Social Readiness",
-    "careerAlignment": "Career Alignment",
-    "trajectoryMomentum": "Trajectory & Momentum"
+    "careerAlignment": "Career Alignment"
   },
   "context": {
     "title": "Context"
