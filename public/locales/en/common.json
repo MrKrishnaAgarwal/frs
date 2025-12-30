@@ -1,0 +1,51 @@
+{
+  "common": {
+    "backToHome": "Back to Home",
+    "selectLanguage": "Select Language"
+  },
+  "report": {
+    "title": "Future Ready Score Report",
+    "subtitle": "A holistic readiness indicator for learning, skills, and pathways",
+    "frsId": "FRS ID",
+    "lastUpdated": "Last Updated",
+    "consentStatus": "Consent Status"
+  },
+  "header": {
+    "futureReadyScore": "Future Ready Score (0–1000)",
+    "holisticReadiness": "Holistic readiness indicator for learning, skills, and pathways"
+  },
+  "studentProfile": {
+    "title": "Student Profile",
+    "ageClass": "Age / Class",
+    "boardStream": "Board / Stream",
+    "school": "School",
+    "languages": "Languages",
+    "region": "Region",
+    "status": "Active"
+  },
+  "scoreGauge": {
+    "futureReady": "FUTURE-READY",
+    "ready": "READY",
+    "emerging": "EMERGING",
+    "developing": "DEVELOPING",
+    "consistentGrowth": "Consistent Growth & Applied Engagement",
+    "indicator": "A dynamic indicator of academic, skill, and career readiness."
+  },
+  "scoreBreakdown": {
+    "title": "Score Breakdown",
+    "academicFoundation": "Academic Foundation",
+    "skillsCompetencies": "Skills & Competencies",
+    "identityFidelity": "Identity & Fidelity",
+    "socialReadiness": "Social Readiness",
+    "careerAlignment": "Career Alignment",
+    "trajectoryMomentum": "Trajectory & Momentum"
+  },
+  "context": {
+    "title": "Context"
+  },
+  "badges": {
+    "nepAligned": "NEP-Aligned",
+    "explainable": "Explainable",
+    "privacyFirst": "Privacy-First"
+  }
+}

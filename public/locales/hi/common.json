@@ -1,0 +1,51 @@
+{
+  "common": {
+    "backToHome": "होम पर वापस जाएं",
+    "selectLanguage": "भाषा चुनें"
+  },
+  "report": {
+    "title": "भविष्य तैयारी स्कोर रिपोर्ट",
+    "subtitle": "सीखने, कौशल और मार्ग के लिए एक समग्र तैयारी संकेतक",
+    "frsId": "FRS आईडी",
+    "lastUpdated": "अंतिम अपडेट",
+    "consentStatus": "सहमति की स्थिति"
+  },
+  "header": {
+    "futureReadyScore": "भविष्य तैयारी स्कोर (0–1000)",
+    "holisticReadiness": "सीखने, कौशल और मार्ग के लिए समग्र तैयारी संकेतक"
+  },
+  "studentProfile": {
+    "title": "छात्र की प्रोफाइल",
+    "ageClass": "आयु / कक्षा",
+    "boardStream": "बोर्ड / विषय",
+    "school": "स्कूल",
+    "languages": "भाषाएं",
+    "region": "क्षेत्र",
+    "status": "सक्रिय"
+  },
+  "scoreGauge": {
+    "futureReady": "भविष्य-तैयार",
+    "ready": "तैयार",
+    "emerging": "उभरता हुआ",
+    "developing": "विकासशील",
+    "consistentGrowth": "सतत विकास और लागू सहभागिता",
+    "indicator": "शैक्षणिक, कौशल और कैरियर तैयारी का एक गतिशील संकेतक।"
+  },
+  "scoreBreakdown": {
+    "title": "स्कोर विभाजन",
+    "academicFoundation": "शैक्षणिक आधार",
+    "skillsCompetencies": "कौशल और दक्षताएं",
+    "identityFidelity": "पहचान और निष्ठा",
+    "socialReadiness": "सामाजिक तैयारी",
+    "careerAlignment": "कैरियर संरेखण",
+    "trajectoryMomentum": "प्रक्षेपवक्र और गति"
+  },
+  "context": {
+    "title": "संदर्भ"
+  },
+  "badges": {
+    "nepAligned": "NEP-संरेखित",
+    "explainable": "व्याख्यायोग्य",
+    "privacyFirst": "गोपनीयता-प्रथम"
+  }
+}
