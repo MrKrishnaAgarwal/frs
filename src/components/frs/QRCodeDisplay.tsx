@@ -1,9 +1,8 @@
-import { useState, useRef, lazy, Suspense } from "react";
+import { useState, useRef } from "react";
 import { ArrowLeft, Download, Copy, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { logShareAction, copyToClipboard } from "@/lib/share-utils";
-
-const QRCode = lazy(() => import("qrcode.react"));
+import QRCode from "qrcode.react";
 
 interface QRCodeDisplayProps {
   url: string;
@@ -12,34 +11,37 @@ interface QRCodeDisplayProps {
 }
 
 export default function QRCodeDisplay({ url, frsId, onBack }: QRCodeDisplayProps) {
-  const qrRef = useRef<HTMLDivElement>(null);
+  const qrRef = useRef<any>(null);
   const [isDownloading, setIsDownloading] = useState(false);
-  const [downloadFormat, setDownloadFormat] = useState<'png' | null>(null);
   const [copiedUrl, setCopiedUrl] = useState(false);
 
-  const downloadQR = async (format: 'png') => {
+  const downloadQR = async () => {
     setIsDownloading(true);
-    setDownloadFormat(format);
     try {
-      const element = qrRef.current?.querySelector('canvas') as HTMLCanvasElement;
-      if (element) {
-        const link = document.createElement('a');
-        link.href = element.toDataURL('image/png');
-        link.download = `FRS-${frsId}-QR.png`;
-        link.click();
-
-        logShareAction({
-          action: 'qr',
-          timestamp: new Date().toISOString(),
-          visibilityLevel: 'lite',
-          frsId,
-        });
+      const canvas = qrRef.current?.querySelector('canvas') as HTMLCanvasElement;
+      if (!canvas) {
+        console.error('Canvas element not found');
+        throw new Error('QR code canvas not found');
       }
+
+      const image = canvas.toDataURL('image/png');
+      const link = document.createElement('a');
+      link.href = image;
+      link.download = `FRS-${frsId}-QR.png`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      logShareAction({
+        action: 'qr',
+        timestamp: new Date().toISOString(),
+        visibilityLevel: 'lite',
+        frsId,
+      });
     } catch (error) {
       console.error('Failed to download QR:', error);
     } finally {
       setIsDownloading(false);
-      setDownloadFormat(null);
     }
   };
 
