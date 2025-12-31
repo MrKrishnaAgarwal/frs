@@ -78,7 +78,6 @@ export default function QRCodeDisplay({ url, frsId, onBack }: QRCodeDisplayProps
             size={256}
             level="H"
             includeMargin={true}
-            quietZone={10}
           />
         </div>
 
