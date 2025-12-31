@@ -1,3 +1,5 @@
+import { jsPDF } from 'jspdf';
+
 // Access logging for share actions
 export interface ShareLog {
   action: 'link' | 'qr' | 'pdf-lite' | 'pdf-full';
