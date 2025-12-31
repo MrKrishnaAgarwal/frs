@@ -30,13 +30,34 @@ export const getFRSLiteUrl = (frsId: string): string => {
   return `${baseUrl}/u/${frsId}`;
 };
 
-// Copy to clipboard helper
+// Copy to clipboard helper with fallback
 export const copyToClipboard = async (text: string): Promise<boolean> => {
   try {
-    await navigator.clipboard.writeText(text);
-    return true;
+    // Try modern Clipboard API first
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      await navigator.clipboard.writeText(text);
+      return true;
+    }
   } catch (err) {
-    console.error('Failed to copy:', err);
+    console.warn('Clipboard API failed, using fallback:', err);
+  }
+
+  // Fallback to older execCommand method
+  try {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-999999px';
+    textArea.style.top = '-999999px';
+    document.body.appendChild(textArea);
+
+    textArea.select();
+    const success = document.execCommand('copy');
+    document.body.removeChild(textArea);
+
+    return success;
+  } catch (fallbackErr) {
+    console.error('Fallback copy method failed:', fallbackErr);
     return false;
   }
 };
