@@ -78,7 +78,7 @@ export const generateFRSLitePDF = async (
   qrDataUrl?: string
 ): Promise<Blob> => {
   // Fetch the pre-designed PDF from public folder
-  const response = await fetch('/FRS_REPORT_KRISHNA_AGARWAL.pdf');
+  const response = await fetch('/FRS_REPORT_KRISHNA_AGARWAL_LITE.pdf');
   if (!response.ok) {
     throw new Error('Failed to fetch FRS report PDF');
   }
