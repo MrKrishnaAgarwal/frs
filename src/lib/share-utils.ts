@@ -317,11 +317,17 @@ export const generateFRSFullPDF = async (
   ctx.textAlign = 'center';
   ctx.fillText('This document is confidential and for the student only.', 400, 1550);
 
-  return new Promise((resolve) => {
-    canvas.toBlob((blob) => {
-      if (blob) {
-        resolve(blob);
-      }
-    }, 'image/png');
+  return new Promise<Blob>((resolve, reject) => {
+    canvas.toBlob(
+      (blob) => {
+        if (blob) {
+          resolve(blob);
+        } else {
+          reject(new Error('Failed to create blob from canvas'));
+        }
+      },
+      'image/png',
+      0.95
+    );
   });
 };
