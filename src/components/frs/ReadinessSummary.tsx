@@ -1,27 +1,95 @@
 import { FileText, Sparkles } from "lucide-react";
 
+interface ReadinessData {
+  conceptual: { level: string; score: number };
+  applied: { level: string; score: number };
+  competitive: { level: string; score: number };
+  selfDirected: { level: string; score: number };
+}
+
 interface ReadinessSummaryProps {
   studentName?: string;
   score?: number;
+  readinessData?: ReadinessData;
 }
 
-const ReadinessSummary = ({ studentName = "Arjun", score = 758 }: ReadinessSummaryProps) => {
-  // Generate dynamic summary based on score
+const ReadinessSummary = ({ 
+  studentName = "Krishna", 
+  score = 758,
+  readinessData = {
+    conceptual: { level: "Strong", score: 318 },
+    applied: { level: "Strong", score: 224 },
+    competitive: { level: "Developing", score: 101 },
+    selfDirected: { level: "Moderate", score: 115 }
+  }
+}: ReadinessSummaryProps) => {
+  
+  // Generate dynamic band based on score
   const getScoreBand = () => {
-    if (score >= 800) return "Highly Future-Ready";
-    if (score >= 650) return "Future-Ready";
-    if (score >= 450) return "Progressing";
-    return "Emerging";
+    if (score >= 750) return "Future-Ready";
+    if (score >= 500) return "Ready";
+    if (score >= 250) return "Emerging";
+    return "Developing";
   };
 
+  // Calculate percentile approximation
+  const getPercentile = () => {
+    return Math.round((score / 1000) * 100);
+  };
+
+  // Generate strengths based on readiness data
+  const getStrengths = () => {
+    const strengths: string[] = [];
+    if (readinessData.conceptual.level === "Strong") {
+      strengths.push("solid foundational understanding across core subjects");
+    }
+    if (readinessData.applied.level === "Strong") {
+      strengths.push("demonstrated ability to apply knowledge in practical contexts");
+    }
+    if (readinessData.selfDirected.level === "Moderate" || readinessData.selfDirected.level === "Strong") {
+      strengths.push("emerging autonomy in learning");
+    }
+    return strengths;
+  };
+
+  // Generate areas for growth based on readiness data
+  const getGrowthAreas = () => {
+    const areas: string[] = [];
+    if (readinessData.competitive.level === "Developing" || readinessData.competitive.level === "Emerging") {
+      areas.push("competitive exam strategies");
+    }
+    if (readinessData.selfDirected.level === "Moderate" || readinessData.selfDirected.level === "Developing") {
+      areas.push("deeper self-driven exploration");
+    }
+    return areas;
+  };
+
+  // Generate comprehensive summary text
   const getSummaryText = () => {
     const band = getScoreBand();
-    
-    if (band === "Highly Future-Ready" || band === "Future-Ready") {
-      return `${studentName} demonstrates strong conceptual and applied readiness, with consistent academic performance and growing skill development. Their trajectory shows steady improvement across all four pillars. While competitive readiness is developing, structured exam strategies can bridge this gap. Self-directed learning shows promise but would benefit from periodic nudges. Overall, ${studentName} is well-positioned for future academic and career pathways, with clear strengths in theoretical understanding and practical application.`;
+    const percentile = getPercentile();
+    const strengths = getStrengths();
+    const growthAreas = getGrowthAreas();
+
+    // Build strengths sentence
+    const strengthsText = strengths.length > 0 
+      ? `${studentName} demonstrates ${strengths.join(" and ")}`
+      : `${studentName} shows promising foundations`;
+
+    // Build growth areas sentence
+    const growthText = growthAreas.length > 0
+      ? `Focus areas include ${growthAreas.join(" and ")}.`
+      : "";
+
+    if (band === "Future-Ready") {
+      return `${strengthsText}, with consistent academic performance reflected in the ${percentile}th percentile standing. The trajectory shows steady improvement across all four pillars — Academics (${readinessData.conceptual.score}/400), Skills (${readinessData.applied.score}/300), Growth (${readinessData.selfDirected.score}/150), and Exposure (101/150). ${growthText} With structured exam preparation and continued project-based learning, ${studentName} is well-positioned for future academic and career pathways, with clear strengths in theoretical understanding and practical application.`;
     }
     
-    return `${studentName} shows promising foundations across readiness dimensions, with particular strength in applied learning. The trajectory indicates positive momentum, especially in academics and skills development. Focus areas include building exam-specific strategies and fostering more self-directed learning habits. With targeted support and structured guidance, ${studentName} is on track to achieve stronger future readiness outcomes.`;
+    if (band === "Ready") {
+      return `${strengthsText}, positioning in the ${percentile}th percentile. The readiness profile indicates balanced development across conceptual and applied dimensions. ${growthText} With targeted support in competitive preparation and fostering self-directed habits, ${studentName} is on track to achieve stronger future readiness outcomes.`;
+    }
+
+    return `${studentName} shows promising foundations across readiness dimensions at the ${percentile}th percentile. The trajectory indicates positive momentum with opportunities for growth across all pillars. ${growthText} With focused guidance and consistent effort, ${studentName} can strengthen overall future readiness positioning.`;
   };
 
   return (
