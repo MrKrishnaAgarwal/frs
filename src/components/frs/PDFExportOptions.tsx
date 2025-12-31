@@ -11,7 +11,6 @@ interface PDFExportOptionsProps {
 }
 
 export default function PDFExportOptions({ frsId, score, onBack }: PDFExportOptionsProps) {
-  const { t } = useTranslation();
   const [selectedType, setSelectedType] = useState<'lite' | 'full' | null>('lite');
   const [isExporting, setIsExporting] = useState(false);
   const [showFullWarning, setShowFullWarning] = useState(false);
