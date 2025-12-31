@@ -68,7 +68,9 @@ export const generateQRDataUrl = async (text: string): Promise<string> => {
   return text;
 };
 
-// PDF Generation helper functions
+// PDF Generation helper functions using jsPDF
+import { jsPDF } from 'jspdf';
+
 export const generatePDFCanvas = (): HTMLCanvasElement => {
   const canvas = document.createElement('canvas');
   const ctx = canvas.getContext('2d');
@@ -76,35 +78,46 @@ export const generatePDFCanvas = (): HTMLCanvasElement => {
   return canvas;
 };
 
-// Generate FRS Lite PDF using Canvas
+// Generate FRS Lite PDF using jsPDF
 export const generateFRSLitePDF = async (
   frsId: string,
   score: number,
   qrDataUrl?: string
 ): Promise<Blob> => {
-  const canvas = generatePDFCanvas();
-  canvas.width = 800;
-  canvas.height = 1100; // A4 aspect ratio
+  // Create PDF document (A4 size)
+  const pdf = new jsPDF({
+    orientation: 'portrait',
+    unit: 'mm',
+    format: 'a4',
+  });
 
-  const ctx = canvas.getContext('2d');
-  if (!ctx) throw new Error('Could not get canvas context');
+  const pageWidth = pdf.internal.pageSize.getWidth();
+  const pageHeight = pdf.internal.pageSize.getHeight();
+  let yPos = 15;
 
-  // Set background
-  ctx.fillStyle = '#0a0a0a';
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  // Set background color
+  pdf.setFillColor(10, 10, 10);
+  pdf.rect(0, 0, pageWidth, pageHeight, 'F');
 
   // Title
-  ctx.fillStyle = '#ffc50f';
-  ctx.font = 'bold 36px Roboto';
-  ctx.fillText('Future Ready Score', 50, 80);
-  ctx.fillStyle = '#fafaf8';
-  ctx.font = '16px Roboto';
-  ctx.fillText('Summary Report', 50, 110);
+  pdf.setFont('roboto', 'bold');
+  pdf.setFontSize(28);
+  pdf.setTextColor(255, 197, 15);
+  pdf.text('Future Ready Score', 15, yPos);
+
+  // Subtitle
+  pdf.setFont('roboto', 'normal');
+  pdf.setFontSize(12);
+  pdf.setTextColor(250, 250, 248);
+  pdf.text('Summary Report', 15, yPos + 8);
+
+  yPos += 20;
 
   // FRS ID
-  ctx.fillStyle = '#a1a1a0';
-  ctx.font = '12px Roboto Mono';
-  ctx.fillText(`FRS ID: ${frsId}`, 50, 160);
+  pdf.setFont('courier', 'normal');
+  pdf.setFontSize(10);
+  pdf.setTextColor(161, 161, 160);
+  pdf.text(`FRS ID: ${frsId}`, 15, yPos);
 
   // Timestamp
   const now = new Date();
@@ -113,91 +126,87 @@ export const generateFRSLitePDF = async (
     month: 'long',
     day: 'numeric',
   });
-  ctx.fillText(`Generated: ${timestamp}`, 50, 185);
+  pdf.text(`Generated: ${timestamp}`, 15, yPos + 6);
 
-  // Score Box
-  ctx.fillStyle = '#ffc50f';
-  ctx.fillRect(50, 220, 700, 200);
-  ctx.fillStyle = '#0a0a0a';
-  ctx.font = 'bold 72px Roboto';
-  ctx.textAlign = 'center';
-  ctx.fillText(String(score), 400, 360);
-  ctx.fillStyle = '#a1a1a0';
-  ctx.font = '18px Roboto';
-  ctx.fillText('/ 1000', 400, 385);
+  yPos += 20;
+
+  // Score box (yellow background)
+  pdf.setFillColor(255, 197, 15);
+  pdf.rect(15, yPos, pageWidth - 30, 40, 'F');
+
+  // Score text
+  pdf.setFont('roboto', 'bold');
+  pdf.setFontSize(36);
+  pdf.setTextColor(10, 10, 10);
+  pdf.text(String(score), pageWidth / 2, yPos + 25, { align: 'center' });
+
+  // Score out of
+  pdf.setFont('roboto', 'normal');
+  pdf.setFontSize(14);
+  pdf.setTextColor(161, 161, 160);
+  pdf.text('/ 1000', pageWidth / 2, yPos + 35, { align: 'center' });
+
+  yPos += 50;
 
   // Band
   const band = score >= 750 ? 'FUTURE-READY' : score >= 500 ? 'READY' : 'EMERGING';
-  ctx.fillStyle = '#ffc50f';
-  ctx.font = 'bold 16px Roboto';
-  ctx.textAlign = 'left';
-  ctx.fillText(`Band: ${band}`, 50, 490);
+  pdf.setFont('roboto', 'bold');
+  pdf.setFontSize(12);
+  pdf.setTextColor(255, 197, 15);
+  pdf.text(`Band: ${band}`, 15, yPos);
+
+  yPos += 12;
 
   // Verification badge
-  ctx.fillStyle = '#4ade80';
-  ctx.fillRect(50, 520, 700, 40);
-  ctx.fillStyle = '#0a0a0a';
-  ctx.font = 'bold 14px Roboto';
-  ctx.textAlign = 'center';
-  ctx.fillText('✓ Verification-backed Summary', 400, 548);
+  pdf.setFillColor(74, 222, 128);
+  pdf.rect(15, yPos, pageWidth - 30, 10, 'F');
+  pdf.setFont('roboto', 'bold');
+  pdf.setFontSize(10);
+  pdf.setTextColor(10, 10, 10);
+  pdf.text('✓ Verification-backed Summary', pageWidth / 2, yPos + 6.5, { align: 'center' });
 
-  // QR Code section - draw placeholder
-  ctx.fillStyle = '#fafaf8';
-  ctx.font = '12px Roboto';
-  ctx.textAlign = 'left';
-  ctx.fillText('Scan to access live FRS page:', 50, 620);
+  yPos += 18;
 
-  // Draw QR code if available
+  // QR Code section label
+  pdf.setFont('roboto', 'normal');
+  pdf.setFontSize(10);
+  pdf.setTextColor(250, 250, 248);
+  pdf.text('Scan to access live FRS page:', 15, yPos);
+
+  yPos += 8;
+
+  // QR Code or placeholder
   if (qrDataUrl) {
     try {
-      await new Promise<void>((resolve, reject) => {
-        const qrImg = new Image();
-        qrImg.onload = () => {
-          ctx.drawImage(qrImg, 50, 640, 200, 200);
-          resolve();
-        };
-        qrImg.onerror = reject;
-        qrImg.src = qrDataUrl;
-      });
+      pdf.addImage(qrDataUrl, 'PNG', 15, yPos, 50, 50);
     } catch (err) {
-      console.warn('Failed to load QR code image:', err);
-      // Draw QR placeholder instead
-      ctx.fillStyle = '#2a2a2a';
-      ctx.fillRect(50, 640, 200, 200);
-      ctx.fillStyle = '#666';
-      ctx.font = '12px Roboto';
-      ctx.textAlign = 'center';
-      ctx.fillText('QR Code', 150, 740);
+      console.warn('Failed to add QR to PDF:', err);
+      // Draw placeholder
+      pdf.setFillColor(42, 42, 42);
+      pdf.rect(15, yPos, 50, 50, 'F');
     }
   } else {
-    // Draw QR placeholder
-    ctx.fillStyle = '#2a2a2a';
-    ctx.fillRect(50, 640, 200, 200);
+    // Draw placeholder
+    pdf.setFillColor(42, 42, 42);
+    pdf.rect(15, yPos, 50, 50, 'F');
   }
 
-  // Footer disclaimer
-  ctx.fillStyle = '#a1a1a0';
-  ctx.font = '10px Roboto';
-  ctx.textAlign = 'center';
-  ctx.fillText(
-    'Shared with student consent. Summary view only. Full data access requires explicit approval.',
-    400,
-    1050
-  );
+  yPos = pageHeight - 20;
 
-  // Convert to blob
+  // Footer disclaimer
+  pdf.setFont('roboto', 'normal');
+  pdf.setFontSize(8);
+  pdf.setTextColor(161, 161, 160);
+  const disclaimer = 'Shared with student consent. Summary view only. Full data access requires explicit approval.';
+  pdf.text(disclaimer, pageWidth / 2, yPos, { align: 'center', maxWidth: pageWidth - 30 });
+
   return new Promise<Blob>((resolve, reject) => {
-    canvas.toBlob(
-      (blob) => {
-        if (blob) {
-          resolve(blob);
-        } else {
-          reject(new Error('Failed to create blob from canvas'));
-        }
-      },
-      'image/png',
-      0.95
-    );
+    try {
+      const blob = pdf.output('blob') as Blob;
+      resolve(blob);
+    } catch (err) {
+      reject(err);
+    }
   });
 };
 
