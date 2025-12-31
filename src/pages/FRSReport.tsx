@@ -19,6 +19,8 @@ import AnimatedSection from "@/components/frs/AnimatedSection";
 import LanguageSelector from "@/components/frs/LanguageSelector";
 import ShareButton from "@/components/frs/ShareButton";
 import NRFBranding from "@/components/frs/NRFBranding";
+import ReadinessTypeAnalysis from "@/components/frs/ReadinessTypeAnalysis";
+import ReadinessSummary from "@/components/frs/ReadinessSummary";
 import anveshLogo from "@/assets/anvesh-logo.png";
 
 declare global {
@@ -155,6 +157,11 @@ const FRSReport = () => {
               </div>
             </div>
 
+            {/* Readiness Type Analysis - After Score Breakdown */}
+            <AnimatedSection animation="fade-up">
+              <ReadinessTypeAnalysis />
+            </AnimatedSection>
+
             {/* Secondary Grid: Trust & Social */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <AnimatedSection animation="fade-up" delay={0}>
@@ -178,9 +185,9 @@ const FRSReport = () => {
               <ActionableInsights />
             </AnimatedSection>
 
-            {/* Share & Validation */}
+            {/* FRS Readiness Summary - Auto-generated narrative */}
             <AnimatedSection animation="fade-up" delay={150}>
-              <ShareValidation />
+              <ReadinessSummary studentName="Arjun" score={758} />
             </AnimatedSection>
 
             {/* Ethics & Disclaimer Footer */}
