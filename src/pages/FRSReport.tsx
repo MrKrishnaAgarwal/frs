@@ -187,7 +187,7 @@ const FRSReport = () => {
 
             {/* FRS Readiness Summary - Auto-generated narrative */}
             <AnimatedSection animation="fade-up" delay={150}>
-              <ReadinessSummary studentName="Arjun" score={758} />
+              <ReadinessSummary studentName="Krishna" score={758} />
             </AnimatedSection>
 
             {/* Ethics & Disclaimer Footer */}

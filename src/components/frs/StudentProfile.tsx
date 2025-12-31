@@ -15,7 +15,7 @@ const StudentProfile = () => {
       <div className="space-y-4">
         {/* Name */}
         <div>
-          <p className="text-2xl font-bold text-foreground">Aarav Verma</p>
+          <p className="text-2xl font-bold text-foreground">Krishna Agarwal</p>
           <div className="flex items-center gap-2 mt-1">
             <Badge variant="outline" className="text-xs border-primary/30 text-primary">
               <CheckCircle className="w-3 h-3 mr-1" />
@@ -30,7 +30,7 @@ const StudentProfile = () => {
         <div className="space-y-3">
           <div className="flex items-center justify-between">
             <span className="text-sm text-muted-foreground">{t("studentProfile.ageClass")}</span>
-            <span className="text-sm font-medium text-foreground">17 yrs | Class 12</span>
+            <span className="text-sm font-medium text-foreground">16 yrs | Class 10</span>
           </div>
 
           <div className="flex items-center justify-between">
@@ -44,7 +44,7 @@ const StudentProfile = () => {
               {t("studentProfile.school")}
             </span>
             <span className="text-sm font-medium text-foreground text-right max-w-[160px]">
-              Kendriya Vidyalaya, Noida
+              Delhi Public School Indore
             </span>
           </div>
 
@@ -61,7 +61,7 @@ const StudentProfile = () => {
               <MapPin className="w-4 h-4" />
               {t("studentProfile.region")}
             </span>
-            <span className="text-sm font-medium text-foreground">Uttar Pradesh</span>
+            <span className="text-sm font-medium text-foreground">Madhya Pradesh</span>
           </div>
         </div>
 
@@ -83,7 +83,7 @@ const StudentProfile = () => {
         <div className="bg-secondary/50 rounded-lg p-3 mt-4">
           <p className="text-xs text-muted-foreground flex items-start gap-2">
             <Shield className="w-4 h-4 flex-shrink-0 mt-0.5 text-primary" />
-            Aadhaar never displayed — backend identity mapping only
+            Trust without surveillance — Identity verification ensures data integrity while protecting student privacy.
           </p>
         </div>
       </div>
