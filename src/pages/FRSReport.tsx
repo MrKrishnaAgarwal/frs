@@ -18,6 +18,7 @@ import ShareValidation from "@/components/frs/ShareValidation";
 import AnimatedSection from "@/components/frs/AnimatedSection";
 import LanguageSelector from "@/components/frs/LanguageSelector";
 import ShareButton from "@/components/frs/ShareButton";
+import NRFBranding from "@/components/frs/NRFBranding";
 import anveshLogo from "@/assets/anvesh-logo.png";
 
 declare global {
@@ -100,8 +101,13 @@ const FRSReport = () => {
         {/* Main Content */}
         <main className="container mx-auto px-4 md:px-6 py-8 md:py-12">
           <div className="max-w-7xl mx-auto space-y-8">
-            {/* Report Header */}
+            {/* NRF Branding Header */}
             <AnimatedSection animation="fade-up">
+              <NRFBranding />
+            </AnimatedSection>
+
+            {/* Report Header */}
+            <AnimatedSection animation="fade-up" delay={50}>
               <ReportHeader frsId={displayId} />
             </AnimatedSection>
 
