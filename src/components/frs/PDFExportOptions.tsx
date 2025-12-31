@@ -196,7 +196,6 @@ export default function PDFExportOptions({ frsId, score, onBack }: PDFExportOpti
           value={`https://anvesh.ai/u/${frsId}`}
           size={200}
           level="H"
-          includeMargin={true}
         />
       </div>
 
