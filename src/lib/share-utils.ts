@@ -141,18 +141,38 @@ export const generateFRSLitePDF = async (
   ctx.textAlign = 'center';
   ctx.fillText('✓ Verification-backed Summary', 400, 548);
 
-  // QR Code section
-  if (qrDataUrl) {
-    ctx.fillStyle = '#fafaf8';
-    ctx.font = '12px Roboto';
-    ctx.textAlign = 'left';
-    ctx.fillText('Scan to access live FRS page:', 50, 620);
+  // QR Code section - draw placeholder
+  ctx.fillStyle = '#fafaf8';
+  ctx.font = '12px Roboto';
+  ctx.textAlign = 'left';
+  ctx.fillText('Scan to access live FRS page:', 50, 620);
 
-    const qrImg = new Image();
-    qrImg.onload = () => {
-      ctx.drawImage(qrImg, 50, 640, 200, 200);
-    };
-    qrImg.src = qrDataUrl;
+  // Draw QR code if available
+  if (qrDataUrl) {
+    try {
+      await new Promise<void>((resolve, reject) => {
+        const qrImg = new Image();
+        qrImg.onload = () => {
+          ctx.drawImage(qrImg, 50, 640, 200, 200);
+          resolve();
+        };
+        qrImg.onerror = reject;
+        qrImg.src = qrDataUrl;
+      });
+    } catch (err) {
+      console.warn('Failed to load QR code image:', err);
+      // Draw QR placeholder instead
+      ctx.fillStyle = '#2a2a2a';
+      ctx.fillRect(50, 640, 200, 200);
+      ctx.fillStyle = '#666';
+      ctx.font = '12px Roboto';
+      ctx.textAlign = 'center';
+      ctx.fillText('QR Code', 150, 740);
+    }
+  } else {
+    // Draw QR placeholder
+    ctx.fillStyle = '#2a2a2a';
+    ctx.fillRect(50, 640, 200, 200);
   }
 
   // Footer disclaimer
@@ -165,13 +185,19 @@ export const generateFRSLitePDF = async (
     1050
   );
 
-  // Convert to PDF-like blob using canvas
-  return new Promise((resolve) => {
-    canvas.toBlob((blob) => {
-      if (blob) {
-        resolve(blob);
-      }
-    }, 'image/png');
+  // Convert to blob
+  return new Promise<Blob>((resolve, reject) => {
+    canvas.toBlob(
+      (blob) => {
+        if (blob) {
+          resolve(blob);
+        } else {
+          reject(new Error('Failed to create blob from canvas'));
+        }
+      },
+      'image/png',
+      0.95
+    );
   });
 };
 
