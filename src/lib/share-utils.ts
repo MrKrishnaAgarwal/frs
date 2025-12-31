@@ -71,7 +71,6 @@ export const generateQRDataUrl = async (text: string): Promise<string> => {
 };
 
 // PDF Generation helper functions using jsPDF
-import { jsPDF } from 'jspdf';
 
 export const generatePDFCanvas = (): HTMLCanvasElement => {
   const canvas = document.createElement('canvas');
