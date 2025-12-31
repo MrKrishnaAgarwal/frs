@@ -62,7 +62,7 @@ const FRSReport = () => {
   return (
     <>
       <Helmet>
-        <title>FRS Report | {displayId} | Anvesh.ai</title>
+        <title>FRS Report | {displayId} | Anvesh</title>
         <meta
           name="description"
           content="Future Ready Score Report - A holistic readiness indicator for learning, skills, and pathways."
@@ -76,11 +76,8 @@ const FRSReport = () => {
           <div className="container mx-auto px-4 md:px-6 py-4">
             <div className="flex items-center justify-between">
               <a href="/" className="flex items-center gap-1.5">
-                <img src={anveshLogo} alt="Anvesh.ai" className="w-7 h-7" />
-                <span className="text-xl font-bold">
-                  <span className="text-primary">Anvesh</span>
-                  <span className="text-foreground">.ai</span>
-                </span>
+                <img src={anveshLogo} alt="Anvesh" className="w-7 h-7" />
+                <span className="text-xl font-bold text-primary">Anvesh</span>
               </a>
               <div className="flex items-center gap-4">
                 {/* Language Selector */}
@@ -206,11 +203,8 @@ const FRSReport = () => {
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
               <div className="flex items-center gap-1.5">
-                <img src={anveshLogo} alt="Anvesh.ai" className="w-6 h-6" />
-                <span className="font-bold">
-                  <span className="text-primary">Anvesh</span>
-                  <span className="text-foreground">.ai</span>
-                </span>
+                <img src={anveshLogo} alt="Anvesh" className="w-6 h-6" />
+                <span className="font-bold text-primary">Anvesh</span>
                 <span className="mx-2">•</span>
                 <span>Issuer of the Future Ready Score</span>
               </div>

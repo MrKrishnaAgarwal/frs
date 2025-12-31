@@ -18,11 +18,8 @@ const Header = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <a href="/" className="flex items-center gap-1.5">
-            <img src={anveshLogo} alt="Anvesh.ai" className="w-8 h-8" />
-            <span className="text-2xl font-bold">
-              <span className="text-primary">Anvesh</span>
-              <span className="text-foreground">.ai</span>
-            </span>
+            <img src={anveshLogo} alt="Anvesh" className="w-8 h-8" />
+            <span className="text-2xl font-bold text-primary">Anvesh</span>
           </a>
 
           {/* Desktop Navigation */}
