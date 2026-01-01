@@ -64,32 +64,9 @@ const ReadinessSummary = ({
     return areas;
   };
 
-  // Generate comprehensive summary text
+  // Static summary text
   const getSummaryText = () => {
-    const band = getScoreBand();
-    const percentile = getPercentile();
-    const strengths = getStrengths();
-    const growthAreas = getGrowthAreas();
-
-    // Build strengths sentence
-    const strengthsText = strengths.length > 0 
-      ? `${studentName} demonstrates ${strengths.join(" and ")}`
-      : `${studentName} shows promising foundations`;
-
-    // Build growth areas sentence
-    const growthText = growthAreas.length > 0
-      ? `Focus areas include ${growthAreas.join(" and ")}.`
-      : "";
-
-    if (band === "Future-Ready") {
-      return `${strengthsText}, with consistent academic performance reflected in the ${percentile}th percentile standing. The trajectory shows steady improvement across all four pillars — Academics (${readinessData.conceptual.score}/400), Skills (${readinessData.applied.score}/300), Growth (${readinessData.selfDirected.score}/150), and Exposure (101/150). ${growthText} With structured exam preparation and continued project-based learning, ${studentName} is well-positioned for future academic and career pathways, with clear strengths in theoretical understanding and practical application.`;
-    }
-    
-    if (band === "Ready") {
-      return `${strengthsText}, positioning in the ${percentile}th percentile. The readiness profile indicates balanced development across conceptual and applied dimensions. ${growthText} With targeted support in competitive preparation and fostering self-directed habits, ${studentName} is on track to achieve stronger future readiness outcomes.`;
-    }
-
-    return `${studentName} shows promising foundations across readiness dimensions at the ${percentile}th percentile. The trajectory indicates positive momentum with opportunities for growth across all pillars. ${growthText} With focused guidance and consistent effort, ${studentName} can strengthen overall future readiness positioning.`;
+    return "Krishna shows strong academic foundations with steady improvement across academics, skills, growth, and exposure, placing him in the 76th percentile. With focused exam preparation and continued project-based learning, he is well positioned for future academic and career pathways.";
   };
 
   return (
