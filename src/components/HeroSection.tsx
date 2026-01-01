@@ -25,22 +25,15 @@ const HeroSection = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
-            <span className="text-foreground">Understanding</span>{" "}
-            <span className="text-primary">Readiness.</span>
+          <h1 className="text-5xl md:text-7xl font-bold mb-8 tracking-tight">
+            From <span className="text-primary">Exam-Based Selection</span> to <span className="text-primary">Readiness-Based Development</span>
           </h1>
-          
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight text-foreground/80">
-            Recognizing Potential.
-          </h2>
-          
-          <h3 className="text-2xl md:text-4xl font-bold mb-8 tracking-tight text-foreground/60">
-            Guiding Futures.
-          </h3>
 
-          {/* Sub-headline */}
+          {/* Sub-headline with NRF Context */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-            <span className="text-primary font-semibold">Future Ready Score (0–1000)</span>: a holistic indicator of academic, skill, and pathway readiness for every Indian learner.
+            <span className="text-primary font-semibold">Future Ready Score (FRS)</span> is a readiness indicator developed under the
+            <span className="block text-foreground font-semibold mt-2">NRF — National Readiness Framework</span>,
+            enabling early, holistic learner support.
           </p>
 
           {/* CTA Buttons */}
