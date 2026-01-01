@@ -20,7 +20,7 @@ const ActionableInsights = () => {
   const recommendedActions = [
     "Add one industry-linked applied project",
     "Enroll in structured mentorship cycle",
-    "Activate advanced mock-test mode",
+    "Activate adaptive mock-test mode.",
   ];
 
   return (
