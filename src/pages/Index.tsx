@@ -47,10 +47,13 @@ const Index = () => {
 
       <div className="min-h-screen bg-background">
         <Header />
+        <NRFBanner />
         <main>
           <HeroSection />
+          <NRFContextSection />
           <WhatIsFRS />
           <ProblemSection />
+          <PolicymakerSection />
           <HowFRSIsUsed />
           <TrustAndEthics />
           <FRSLitePreview />
