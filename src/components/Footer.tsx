@@ -83,6 +83,21 @@ const Footer = () => {
             </div>
           </div>
 
+          {/* NRF Governance Statement */}
+          <div className="bg-card/50 border border-primary/20 rounded-lg p-6 md:p-8 mb-8">
+            <div className="text-center">
+              <h4 className="text-lg font-bold text-foreground mb-2">
+                NRF — <span className="text-primary">National Readiness Framework</span>
+              </h4>
+              <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
+                A unified framework for tracking learner readiness across India.
+              </p>
+              <p className="text-xs text-muted-foreground mt-3">
+                <span className="text-primary font-medium">FRS is a readiness indicator implemented under NRF standards.</span>
+              </p>
+            </div>
+          </div>
+
           {/* Disclaimer */}
           <div className="border-t border-border pt-8 mb-8">
             <p className="text-xs text-muted-foreground text-center max-w-3xl mx-auto">
