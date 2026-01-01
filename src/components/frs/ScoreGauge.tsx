@@ -157,13 +157,15 @@ const ScoreGauge = ({ score, maxScore, bandDescription }: ScoreGaugeProps) => {
       {/* Band display */}
       <div className="mt-8 text-center">
         <div 
-          className="inline-flex items-center gap-2 px-5 py-2 rounded-full"
+          className="inline-flex items-center gap-2 px-8 py-2.5 rounded-full border-2"
           style={{ 
-            backgroundColor: bandInfo.color,
+            backgroundColor: 'transparent',
+            borderColor: '#ffc50f',
           }}
         >
           <span 
-            className="text-base font-bold text-white"
+            className="text-base font-bold"
+            style={{ color: bandInfo.color }}
           >
             {bandInfo.band}
           </span>
