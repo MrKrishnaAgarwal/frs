@@ -25,15 +25,13 @@ const HeroSection = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-8 tracking-tight">
+          <h1 className="text-4xl md:text-6xl font-bold mb-8 tracking-tight leading-tight">
             From <span className="text-primary">Exam-Based Selection</span> to <span className="text-primary">Readiness-Based Development</span>
           </h1>
 
           {/* Sub-headline with NRF Context */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-            <span className="text-primary font-semibold">Future Ready Score (FRS)</span> is a readiness indicator developed under the
-            <span className="block text-foreground font-semibold mt-2">NRF — National Readiness Framework</span>,
-            enabling early, holistic learner support.
+          <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
+            <span className="text-primary font-semibold">Future Ready Score (FRS)</span> is a readiness indicator developed under the <span className="text-foreground font-semibold">NRF — National Readiness Framework</span>, enabling early, holistic learner support.
           </p>
 
           {/* CTA Buttons */}
