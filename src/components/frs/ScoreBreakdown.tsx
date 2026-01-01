@@ -152,12 +152,48 @@ const ScoreBreakdown = () => {
             >
               {/* Category Header */}
               <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-3">
-                  <div 
-                    className="w-10 h-10 rounded-lg flex items-center justify-center transition-transform duration-300 hover:scale-110"
+                <div className="flex items-center gap-3 min-w-0">
+                  <div
+                    className="w-10 h-10 rounded-lg flex items-center justify-center transition-transform duration-300 hover:scale-110 flex-shrink-0"
                     style={{ backgroundColor: `${color}20` }}
                   >
-                    <Icon className="w-5 h-5" style={{ color }} />
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke={color}
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="w-5 h-5"
+                    >
+                      {Icon.toString().includes('BookOpen') && (
+                        <>
+                          <path d="M12 7v14" />
+                          <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" />
+                        </>
+                      )}
+                      {Icon.toString().includes('Wrench') && (
+                        <>
+                          <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 1 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                        </>
+                      )}
+                      {Icon.toString().includes('TrendingUp') && (
+                        <>
+                          <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                          <polyline points="17 6 23 6 23 12" />
+                        </>
+                      )}
+                      {Icon.toString().includes('Sprout') && (
+                        <>
+                          <path d="M7 20h10" />
+                          <path d="M10 20c0-1 1-3 3-3s3 2 3 3" />
+                          <path d="M9 9c0-1 .895-2 2-2s2 1 2 2c0 1-1 3-2 4-1-1-2-3-2-4z" />
+                          <path d="M12 4v5" />
+                        </>
+                      )}
+                    </svg>
                   </div>
                   <span className="font-semibold text-foreground">{category.name}</span>
                 </div>
