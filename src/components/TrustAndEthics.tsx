@@ -37,8 +37,13 @@ const TrustAndEthics = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Trust, Consent & <span className="text-primary">Ethics</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-6">
               Privacy is not a feature—it's the foundation. FRS is built on principles that protect every learner.
+            </p>
+            <p className="text-sm text-primary font-medium mb-6">
+              <span className="inline-block px-3 py-1 bg-primary/10 border border-primary/20 rounded-full">
+                🏛️ NRF-Governed — Designed under National Readiness Framework standards
+              </span>
             </p>
           </div>
 
