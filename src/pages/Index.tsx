@@ -1,8 +1,11 @@
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
+import NRFBanner from "@/components/NRFBanner";
 import HeroSection from "@/components/HeroSection";
+import NRFContextSection from "@/components/NRFContextSection";
 import WhatIsFRS from "@/components/WhatIsFRS";
 import ProblemSection from "@/components/ProblemSection";
+import PolicymakerSection from "@/components/PolicymakerSection";
 import HowFRSIsUsed from "@/components/HowFRSIsUsed";
 import TrustAndEthics from "@/components/TrustAndEthics";
 import FRSLitePreview from "@/components/FRSLitePreview";
@@ -44,10 +47,13 @@ const Index = () => {
 
       <div className="min-h-screen bg-background">
         <Header />
+        <NRFBanner />
         <main>
           <HeroSection />
+          <NRFContextSection />
           <WhatIsFRS />
           <ProblemSection />
+          <PolicymakerSection />
           <HowFRSIsUsed />
           <TrustAndEthics />
           <FRSLitePreview />
