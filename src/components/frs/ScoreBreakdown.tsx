@@ -214,13 +214,7 @@ const ScoreBreakdown = () => {
                     className="w-10 h-10 rounded-lg flex items-center justify-center transition-transform duration-300 hover:scale-110 flex-shrink-0"
                     style={{ backgroundColor: `${color}20` }}
                   >
-                    <Icon
-                      className="w-5 h-5"
-                      style={{
-                        color,
-                        filter: `drop-shadow(0 0 0 ${color})`
-                      }}
-                    />
+                    <ColoredIcon icon={Icon} color={color} />
                   </div>
                   <span className="font-semibold text-foreground">{category.name}</span>
                 </div>
