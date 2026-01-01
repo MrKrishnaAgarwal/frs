@@ -27,18 +27,13 @@ export default function ShareButton({
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             variant="outline"
-            className="gap-2 border-primary/40 bg-primary/8 hover:bg-primary/15 text-foreground transition-all duration-300 relative overflow-hidden"
+            className="gap-2 border-primary bg-background hover:bg-primary hover:text-primary-foreground text-foreground transition-all duration-300 relative overflow-hidden"
             aria-label="Share FRS - Send your verified score to colleges and institutions"
           >
             <Share2 className="w-4 h-4 transition-transform duration-300" style={{
               transform: isHovered ? 'scale(1.1)' : 'scale(1)',
             }} />
             <span className="hidden sm:inline font-medium">Share FRS</span>
-
-            {/* Subtle glow effect on hover */}
-            {isHovered && (
-              <div className="absolute inset-0 bg-primary/5 rounded-md animate-pulse pointer-events-none" />
-            )}
           </Button>
         </TooltipTrigger>
         <TooltipContent side="bottom" className="text-xs">
