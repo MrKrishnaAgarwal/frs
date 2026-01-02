@@ -36,7 +36,7 @@ const Header = () => {
           </nav>
 
           <div className="hidden md:flex items-center gap-4">
-            <a href="/u/FRS-IND-2026-001786">
+            <a href="/1786">
               <Button variant="outline" size="sm">
                 View Sample FRS
               </Button>
