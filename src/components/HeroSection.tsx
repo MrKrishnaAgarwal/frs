@@ -36,7 +36,7 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <a href="/u/FRS-IND-2026-001786">
+            <a href="/1786">
               <Button size="lg" className="text-lg px-8 py-6 group w-full sm:w-auto">
                 View Sample FRS
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />

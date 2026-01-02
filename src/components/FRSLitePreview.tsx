@@ -25,7 +25,7 @@ const FRSLitePreview = () => {
                 <div className="flex items-center justify-between mb-4">
                   <div>
                     <p className="text-sm text-muted-foreground mb-1">Future Ready Score</p>
-                    <p className="text-xs font-mono text-muted-foreground">anvesh.ai/u/FRS-IND-2026-001284</p>
+                    <p className="text-xs font-mono text-muted-foreground">anvesh.ai/1284</p>
                   </div>
                   <Badge variant="outline" className="border-primary/30 text-primary">
                     <CheckCircle className="w-3 h-3 mr-1" />
