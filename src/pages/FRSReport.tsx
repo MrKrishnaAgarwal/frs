@@ -31,8 +31,9 @@ declare global {
 }
 
 const FRSReport = () => {
-  const { frsId } = useParams();
-  const displayId = frsId || "FRS-IND-2026-001786";
+  const { id } = useParams();
+  // Convert short ID (e.g., "1786") to full FRS ID format
+  const displayId = id ? `FRS-IND-2026-${id.padStart(6, '0')}` : "FRS-IND-2026-001786";
   const { t } = useTranslation();
 
   useEffect(() => {
