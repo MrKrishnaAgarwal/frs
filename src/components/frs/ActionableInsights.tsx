@@ -1,26 +1,28 @@
 import { Lightbulb, CheckCircle, AlertCircle, ArrowRight, Sparkles } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
 
 const ActionableInsights = () => {
+  const { t } = useTranslation();
   const [ref, isVisible] = useScrollAnimation<HTMLDivElement>();
 
   const workingWell = [
-    "Strong conceptual grounding in core subjects",
-    "Consistent upward improvement trend",
-    "High engagement in applied projects",
+    t("insights.workingWell1"),
+    t("insights.workingWell2"),
+    t("insights.workingWell3"),
   ];
 
   const needsSupport = [
-    "Advanced communication confidence",
-    "Competitive exam strategy",
-    "Career pathway clarity",
+    t("insights.supportHelps1"),
+    t("insights.supportHelps2"),
+    t("insights.supportHelps3"),
   ];
 
   const recommendedActions = [
-    "Add one industry-linked applied project",
-    "Enroll in structured mentorship cycle",
-    "Activate adaptive mock-test mode.",
+    t("insights.recommendedActions1"),
+    t("insights.recommendedActions2"),
+    t("insights.recommendedActions3"),
   ];
 
   return (
@@ -33,7 +35,7 @@ const ActionableInsights = () => {
       
       <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2 relative z-10">
         <Lightbulb className="w-6 h-6 text-primary animate-pulse" />
-        Actionable Insights
+        {t("insights.title")}
         <Sparkles className="w-4 h-4 text-primary/50 ml-2" />
       </h3>
 
@@ -46,7 +48,7 @@ const ActionableInsights = () => {
         )} style={{ transitionDelay: "0ms" }}>
           <h4 className="font-semibold text-foreground mb-4 flex items-center gap-2">
             <CheckCircle className="w-5 h-5 text-green-500" />
-            What's Working Well
+            {t("insights.workingWell")}
           </h4>
           <ul className="space-y-3">
             {workingWell.map((item, index) => (
@@ -73,7 +75,7 @@ const ActionableInsights = () => {
         )} style={{ transitionDelay: "150ms" }}>
           <h4 className="font-semibold text-foreground mb-4 flex items-center gap-2">
             <AlertCircle className="w-5 h-5 text-yellow-500" />
-            Where Support Helps Most
+            {t("insights.supportHelps")}
           </h4>
           <ul className="space-y-3">
             {needsSupport.map((item, index) => (
@@ -96,7 +98,7 @@ const ActionableInsights = () => {
         )} style={{ transitionDelay: "300ms" }}>
           <h4 className="font-semibold text-foreground mb-4 flex items-center gap-2">
             <ArrowRight className="w-5 h-5 text-primary animate-bounce" />
-            Recommended Next Actions
+            {t("insights.recommendedActions")}
           </h4>
           <ul className="space-y-3">
             {recommendedActions.map((item, index) => (

@@ -8,7 +8,8 @@
     "subtitle": "A holistic, longitudinal indicator of learning, skills, and career readiness.",
     "frsId": "FRS ID",
     "lastUpdated": "Last Updated",
-    "consentStatus": "Consent Status"
+    "consentStatus": "Consent Status",
+    "consentApproved": "Student / Guardian Approved"
   },
   "header": {
     "futureReadyScore": "Future Readiness Score (0–1000)",
@@ -21,7 +22,12 @@
     "school": "School",
     "languages": "Languages",
     "region": "Region",
-    "status": "Active"
+    "status": "Active",
+    "schoolBoardVerified": "School + Board Verified",
+    "frsStatus": "FRS Status: Active",
+    "privacyNote": "Trust without surveillance — Identity verification ensures data integrity while protecting student privacy.",
+    "years": "yrs",
+    "class": "Class"
   },
   "scoreGauge": {
     "futureReady": "FUTURE-READINESS",
@@ -39,10 +45,130 @@
     "exposureEnrichment": "Exposure & Enrichment",
     "identityFidelity": "Identity & Fidelity",
     "socialReadiness": "Social Readiness",
-    "careerAlignment": "Career Alignment"
+    "careerAlignment": "Career Alignment",
+    "class10Board": "Class 10 Board",
+    "class12Board": "Class 12 Board (current)",
+    "entranceExams": "Entrance Exams (CUET)",
+    "olympiads": "Olympiads / Competitive Exams",
+    "coreSubjectSkills": "Core Subject Skills",
+    "communicationSkills": "Communication & Soft Skills",
+    "technicalSkills": "Technical / Digital Skills",
+    "problemSolving": "Applied Problem Solving",
+    "improvementTrajectory": "Improvement Trajectory",
+    "consistencyAttendance": "Consistency & Attendance",
+    "selfInitiatedLearning": "Self-Initiated Learning",
+    "extracurriculars": "Extracurriculars",
+    "communityVolunteering": "Community / Volunteering",
+    "projectsInternships": "Projects / Internships"
   },
   "context": {
-    "title": "Context"
+    "title": "Context & Support",
+    "description": "Non-scoring context layer for holistic understanding",
+    "learningSupportPreferences": "Learning Support Preferences",
+    "considered": "Considered",
+    "financialAid": "Financial Aid",
+    "acknowledged": "Acknowledged",
+    "schoolInfrastructure": "School Infrastructure Index",
+    "medium": "Medium",
+    "contextNote": "Context indicators add perspective only — they never reduce or inflate the score."
+  },
+  "identity": {
+    "title": "Identity Fidelity",
+    "description": "Trust layer for authenticity verification",
+    "identityMatchConfidence": "Identity Match Confidence",
+    "high": "High",
+    "academicRecordConsistency": "Academic Record Consistency",
+    "verified": "Verified",
+    "sourceCrossValidation": "Source Cross-Validation",
+    "multipleTrustedSources": "Multiple trusted sources",
+    "purposeNote": "Purpose: trust and authenticity — not surveillance."
+  },
+  "social": {
+    "title": "Social & Collaborative Readiness",
+    "indicatorOnly": "Indicator only",
+    "description": "Non-scoring behavioral indicators",
+    "teamworkCollaboration": "Teamwork & Collaboration",
+    "strong": "Strong",
+    "peerLearning": "Peer Learning Participation",
+    "active": "Active",
+    "communityEngagement": "Community Engagement Signals",
+    "positive": "Positive",
+    "derivedNote": "Derived from participation signals, not personal behavior tracking."
+  },
+  "career": {
+    "title": "Career & Pathway Alignment",
+    "interestClusters": "Interest Clusters",
+    "engineering": "Engineering",
+    "dataScience": "Data Science",
+    "recommendedStreams": "Recommended Streams",
+    "stem": "STEM",
+    "appliedSciences": "Applied Sciences",
+    "mentorshipStatus": "Mentorship Status",
+    "connected": "Connected",
+    "frsUseCase": "FRS Use Case",
+    "useCaseDescription": "College admissions, scholarships, guidance"
+  },
+  "trajectory": {
+    "title": "FRS Trajectory",
+    "pointsImprovement": "points",
+    "over2Years": "improvement over 2 years",
+    "keyMilestones": "Key Milestones",
+    "skillCertificationAdded": "Skill certification added",
+    "competencyValidation": "Competency validation",
+    "mentorshipSessionCompleted": "Mentorship session completed",
+    "guidedGrowth": "Guided growth",
+    "appliedProjectSubmitted": "Applied project submitted",
+    "appliedLearningEvidence": "Applied learning evidence"
+  },
+  "insights": {
+    "title": "Actionable Insights",
+    "workingWell": "What's Working Well",
+    "workingWell1": "Strong conceptual grounding in core subjects",
+    "workingWell2": "Consistent upward improvement trend",
+    "workingWell3": "High engagement in applied projects",
+    "supportHelps": "Where Support Helps Most",
+    "supportHelps1": "Advanced communication confidence",
+    "supportHelps2": "Competitive exam strategy",
+    "supportHelps3": "Career pathway clarity",
+    "recommendedActions": "Recommended Next Actions",
+    "recommendedActions1": "Add one industry-linked applied project",
+    "recommendedActions2": "Enroll in structured mentorship cycle",
+    "recommendedActions3": "Activate adaptive mock-test mode."
+  },
+  "readinessAnalysis": {
+    "title": "Readiness Type Analysis",
+    "subtitle": "Show readiness as types, not just domains",
+    "readinessType": "Readiness Type",
+    "level": "Level",
+    "insight": "Insight",
+    "conceptualReadiness": "Conceptual Readiness",
+    "appliedReadiness": "Applied Readiness",
+    "competitiveReadiness": "Competitive Readiness",
+    "selfDirectedReadiness": "Self-Directed Readiness",
+    "strong": "Strong",
+    "developing": "Developing",
+    "moderate": "Moderate",
+    "emerging": "Emerging",
+    "conceptualInsight": "Handles theory and abstraction well",
+    "appliedInsight": "Converts learning into outcomes",
+    "competitiveInsight": "Needs exam-specific strategy",
+    "selfDirectedInsight": "Benefits from structured nudges"
+  },
+  "summary": {
+    "title": "FRS Readiness Summary",
+    "autoGenerated": "Auto-generated",
+    "summaryText": "Krishna shows strong academic foundations with steady improvement across academics, skills, growth, and exposure, placing him in the 76th percentile. With focused exam preparation and continued project-based learning, he is well positioned for future academic and career pathways.",
+    "summaryNote": "This summary is synthesized from all FRS dimensions and is intended as a guidance narrative, not a definitive assessment."
+  },
+  "ethics": {
+    "title": "Ethics & Disclaimer",
+    "disclaimer": "FRS is a guidance tool — not a ranking system. Scores are dynamic and improve with effort and support. No single score defines a learner."
+  },
+  "footer": {
+    "issuer": "Issuer of the Future Readiness Score",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfUse": "Terms of Use",
+    "dataProtection": "Data Protection"
   },
   "badges": {
     "nepAligned": "NEP-Aligned",
@@ -76,5 +202,18 @@
     "fullExportWarning": "You are exporting your full FRS report. This contains detailed information about your academic, skill, and career readiness. Full reports are for your records only.",
     "footerNote": "All shares are logged and tracked in your Consent History. You maintain full control.",
     "publicDisabled": "Public sharing is currently disabled. Enable it in Privacy Settings to share."
+  },
+  "shareValidation": {
+    "title": "Share & Validation",
+    "description": "This FRS may be shared (with consent) with:",
+    "collegesUniversities": "Colleges & Universities",
+    "scholarshipBodies": "Scholarship Bodies",
+    "schools": "Schools",
+    "mentors": "Mentors",
+    "verificationSources": "Verification Sources"
+  },
+  "nrf": {
+    "title": "NRF — National Readiness Framework",
+    "subtitle": "A unified framework for tracking learner readiness across India"
   }
 }
