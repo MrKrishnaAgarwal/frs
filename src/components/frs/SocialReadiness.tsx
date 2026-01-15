@@ -1,24 +1,27 @@
 import { Users, HeartHandshake, MessageCircle } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { useTranslation } from "react-i18next";
 
 const SocialReadiness = () => {
+  const { t } = useTranslation();
+
   const indicators = [
     { 
       icon: Users, 
-      label: "Teamwork & Collaboration", 
-      value: "Strong",
+      label: t("social.teamworkCollaboration"), 
+      value: t("social.strong"),
       color: "text-primary"
     },
     { 
       icon: MessageCircle, 
-      label: "Peer Learning Participation", 
-      value: "Active",
+      label: t("social.peerLearning"), 
+      value: t("social.active"),
       color: "text-primary"
     },
     { 
       icon: HeartHandshake, 
-      label: "Community Engagement Signals", 
-      value: "Positive",
+      label: t("social.communityEngagement"), 
+      value: t("social.positive"),
       color: "text-primary"
     },
   ];
@@ -28,15 +31,15 @@ const SocialReadiness = () => {
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-bold text-foreground flex items-center gap-2">
           <Users className="w-5 h-5 text-primary" />
-          Social & Collaborative Readiness
+          {t("social.title")}
         </h3>
         <Badge variant="outline" className="text-xs border-muted-foreground/30">
-          Indicator only
+          {t("social.indicatorOnly")}
         </Badge>
       </div>
 
       <p className="text-sm text-muted-foreground mb-4">
-        Non-scoring behavioral indicators
+        {t("social.description")}
       </p>
 
       <div className="space-y-3">
@@ -59,7 +62,7 @@ const SocialReadiness = () => {
 
       <div className="mt-4 p-3 bg-secondary/50 rounded-lg">
         <p className="text-xs text-muted-foreground">
-          Derived from participation signals, not personal behavior tracking.
+          {t("social.derivedNote")}
         </p>
       </div>
     </div>

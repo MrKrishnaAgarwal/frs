@@ -8,7 +8,8 @@
     "subtitle": "सीखने, कौशल और करियर तत्परता का एक समग्र, दीर्घकालिक संकेतक।",
     "frsId": "FRS आईडी",
     "lastUpdated": "अंतिम अपडेट",
-    "consentStatus": "सहमति की स्थिति"
+    "consentStatus": "सहमति की स्थिति",
+    "consentApproved": "छात्र / अभिभावक द्वारा स्वीकृत"
   },
   "header": {
     "futureReadyScore": "भविष्य तत्परता स्कोर (0–1000)",
@@ -21,7 +22,12 @@
     "school": "विद्यालय",
     "languages": "भाषाएं",
     "region": "क्षेत्र",
-    "status": "सक्रिय"
+    "status": "सक्रिय",
+    "schoolBoardVerified": "विद्यालय + बोर्ड सत्यापित",
+    "frsStatus": "FRS स्थिति: सक्रिय",
+    "privacyNote": "निगरानी के बिना विश्वास — पहचान सत्यापन छात्र गोपनीयता की रक्षा करते हुए डेटा अखंडता सुनिश्चित करता है।",
+    "years": "वर्ष",
+    "class": "कक्षा"
   },
   "scoreGauge": {
     "futureReady": "भविष्य-तत्पर",
@@ -39,10 +45,130 @@
     "exposureEnrichment": "अनुभव और संवर्धन",
     "identityFidelity": "पहचान और विश्वसनीयता",
     "socialReadiness": "सामाजिक तत्परता",
-    "careerAlignment": "करियर संरेखण"
+    "careerAlignment": "करियर संरेखण",
+    "class10Board": "कक्षा 10 बोर्ड",
+    "class12Board": "कक्षा 12 बोर्ड (वर्तमान)",
+    "entranceExams": "प्रवेश परीक्षाएं (CUET)",
+    "olympiads": "ओलंपियाड / प्रतियोगी परीक्षाएं",
+    "coreSubjectSkills": "मुख्य विषय कौशल",
+    "communicationSkills": "संचार और सॉफ्ट स्किल्स",
+    "technicalSkills": "तकनीकी / डिजिटल कौशल",
+    "problemSolving": "व्यावहारिक समस्या समाधान",
+    "improvementTrajectory": "सुधार प्रक्षेपवक्र",
+    "consistencyAttendance": "निरंतरता और उपस्थिति",
+    "selfInitiatedLearning": "स्व-पहल शिक्षण",
+    "extracurriculars": "पाठ्येतर गतिविधियां",
+    "communityVolunteering": "सामुदायिक / स्वयंसेवा",
+    "projectsInternships": "परियोजनाएं / इंटर्नशिप"
   },
   "context": {
-    "title": "संदर्भ"
+    "title": "संदर्भ और सहायता",
+    "description": "समग्र समझ के लिए गैर-स्कोरिंग संदर्भ परत",
+    "learningSupportPreferences": "शिक्षण सहायता प्राथमिकताएं",
+    "considered": "विचारित",
+    "financialAid": "वित्तीय सहायता",
+    "acknowledged": "स्वीकृत",
+    "schoolInfrastructure": "विद्यालय अवसंरचना सूचकांक",
+    "medium": "मध्यम",
+    "contextNote": "संदर्भ संकेतक केवल परिप्रेक्ष्य जोड़ते हैं — वे कभी भी स्कोर को कम या बढ़ाते नहीं हैं।"
+  },
+  "identity": {
+    "title": "पहचान विश्वसनीयता",
+    "description": "प्रामाणिकता सत्यापन के लिए विश्वास परत",
+    "identityMatchConfidence": "पहचान मिलान विश्वास",
+    "high": "उच्च",
+    "academicRecordConsistency": "शैक्षणिक रिकॉर्ड सुसंगतता",
+    "verified": "सत्यापित",
+    "sourceCrossValidation": "स्रोत क्रॉस-सत्यापन",
+    "multipleTrustedSources": "अनेक विश्वसनीय स्रोत",
+    "purposeNote": "उद्देश्य: विश्वास और प्रामाणिकता — निगरानी नहीं।"
+  },
+  "social": {
+    "title": "सामाजिक और सहयोगात्मक तत्परता",
+    "indicatorOnly": "केवल संकेतक",
+    "description": "गैर-स्कोरिंग व्यवहार संकेतक",
+    "teamworkCollaboration": "टीमवर्क और सहयोग",
+    "strong": "मजबूत",
+    "peerLearning": "सहकर्मी शिक्षण भागीदारी",
+    "active": "सक्रिय",
+    "communityEngagement": "सामुदायिक सहभागिता संकेत",
+    "positive": "सकारात्मक",
+    "derivedNote": "भागीदारी संकेतों से प्राप्त, व्यक्तिगत व्यवहार ट्रैकिंग नहीं।"
+  },
+  "career": {
+    "title": "करियर और मार्ग संरेखण",
+    "interestClusters": "रुचि समूह",
+    "engineering": "इंजीनियरिंग",
+    "dataScience": "डेटा साइंस",
+    "recommendedStreams": "अनुशंसित धाराएं",
+    "stem": "STEM",
+    "appliedSciences": "अनुप्रयुक्त विज्ञान",
+    "mentorshipStatus": "मेंटरशिप स्थिति",
+    "connected": "जुड़ा हुआ",
+    "frsUseCase": "FRS उपयोग मामला",
+    "useCaseDescription": "कॉलेज प्रवेश, छात्रवृत्ति, मार्गदर्शन"
+  },
+  "trajectory": {
+    "title": "FRS प्रक्षेपवक्र",
+    "pointsImprovement": "अंक सुधार",
+    "over2Years": "2 वर्षों में",
+    "keyMilestones": "प्रमुख मील के पत्थर",
+    "skillCertificationAdded": "कौशल प्रमाणन जोड़ा गया",
+    "competencyValidation": "दक्षता सत्यापन",
+    "mentorshipSessionCompleted": "मेंटरशिप सत्र पूर्ण",
+    "guidedGrowth": "निर्देशित विकास",
+    "appliedProjectSubmitted": "अनुप्रयुक्त परियोजना जमा",
+    "appliedLearningEvidence": "अनुप्रयुक्त शिक्षण साक्ष्य"
+  },
+  "insights": {
+    "title": "कार्रवाई योग्य अंतर्दृष्टि",
+    "workingWell": "क्या अच्छा चल रहा है",
+    "workingWell1": "मुख्य विषयों में मजबूत वैचारिक आधार",
+    "workingWell2": "लगातार ऊपर की ओर सुधार प्रवृत्ति",
+    "workingWell3": "अनुप्रयुक्त परियोजनाओं में उच्च सहभागिता",
+    "supportHelps": "जहां सहायता सबसे अधिक मदद करती है",
+    "supportHelps1": "उन्नत संचार आत्मविश्वास",
+    "supportHelps2": "प्रतियोगी परीक्षा रणनीति",
+    "supportHelps3": "करियर मार्ग स्पष्टता",
+    "recommendedActions": "अनुशंसित अगले कदम",
+    "recommendedActions1": "एक उद्योग-लिंक्ड अनुप्रयुक्त परियोजना जोड़ें",
+    "recommendedActions2": "संरचित मेंटरशिप चक्र में नामांकन करें",
+    "recommendedActions3": "अनुकूली मॉक-टेस्ट मोड सक्रिय करें।"
+  },
+  "readinessAnalysis": {
+    "title": "तत्परता प्रकार विश्लेषण",
+    "subtitle": "तत्परता को प्रकारों के रूप में दिखाएं, न कि केवल डोमेन के रूप में",
+    "readinessType": "तत्परता प्रकार",
+    "level": "स्तर",
+    "insight": "अंतर्दृष्टि",
+    "conceptualReadiness": "वैचारिक तत्परता",
+    "appliedReadiness": "अनुप्रयुक्त तत्परता",
+    "competitiveReadiness": "प्रतिस्पर्धी तत्परता",
+    "selfDirectedReadiness": "स्व-निर्देशित तत्परता",
+    "strong": "मजबूत",
+    "developing": "विकासशील",
+    "moderate": "मध्यम",
+    "emerging": "उभरता हुआ",
+    "conceptualInsight": "सिद्धांत और अमूर्तता को अच्छी तरह संभालता है",
+    "appliedInsight": "सीखने को परिणामों में बदलता है",
+    "competitiveInsight": "परीक्षा-विशिष्ट रणनीति की आवश्यकता है",
+    "selfDirectedInsight": "संरचित प्रोत्साहन से लाभ होता है"
+  },
+  "summary": {
+    "title": "FRS तत्परता सारांश",
+    "autoGenerated": "स्वतः जनित",
+    "summaryText": "कृष्णा शैक्षणिक, कौशल, विकास और अनुभव में निरंतर सुधार के साथ मजबूत शैक्षणिक आधार दिखाता है, जो उसे 76वें प्रतिशतक में रखता है। केंद्रित परीक्षा तैयारी और निरंतर परियोजना-आधारित शिक्षण के साथ, वह भविष्य के शैक्षणिक और करियर मार्गों के लिए अच्छी स्थिति में है।",
+    "summaryNote": "यह सारांश सभी FRS आयामों से संश्लेषित है और एक मार्गदर्शन कथा के रूप में है, निश्चित मूल्यांकन नहीं।"
+  },
+  "ethics": {
+    "title": "नैतिकता और अस्वीकरण",
+    "disclaimer": "FRS एक मार्गदर्शन उपकरण है — रैंकिंग प्रणाली नहीं। स्कोर गतिशील हैं और प्रयास और सहायता के साथ सुधरते हैं। कोई भी एकल स्कोर किसी शिक्षार्थी को परिभाषित नहीं करता।"
+  },
+  "footer": {
+    "issuer": "भविष्य तत्परता स्कोर का जारीकर्ता",
+    "privacyPolicy": "गोपनीयता नीति",
+    "termsOfUse": "उपयोग की शर्तें",
+    "dataProtection": "डेटा सुरक्षा"
   },
   "badges": {
     "nepAligned": "NEP-संरेखित",
@@ -76,5 +202,18 @@
     "fullExportWarning": "आप अपनी पूर्ण FRS रिपोर्ट निर्यात कर रहे हैं। इसमें आपकी शैक्षणिक, कौशल और करियर तत्परता के बारे में विस्तृत जानकारी है। पूर्ण रिपोर्ट केवल आपके रिकॉर्ड के लिए हैं।",
     "footerNote": "सभी साझाकरण आपकी सहमति इतिहास में लॉग और ट्रैक किए जाते हैं। आप पूर्ण नियंत्रण बनाए रखते हैं।",
     "publicDisabled": "सार्वजनिक साझाकरण वर्तमान में अक्षम है। साझा करने के लिए गोपनीयता सेटिंग्स में इसे सक्षम करें।"
+  },
+  "shareValidation": {
+    "title": "साझाकरण और सत्यापन",
+    "description": "यह FRS सहमति के साथ साझा किया जा सकता है:",
+    "collegesUniversities": "कॉलेज और विश्वविद्यालय",
+    "scholarshipBodies": "छात्रवृत्ति निकाय",
+    "schools": "विद्यालय",
+    "mentors": "सलाहकार",
+    "verificationSources": "सत्यापन स्रोत"
+  },
+  "nrf": {
+    "title": "NRF — राष्ट्रीय तत्परता ढांचा",
+    "subtitle": "भारत भर में शिक्षार्थी तत्परता को ट्रैक करने के लिए एक एकीकृत ढांचा"
   }
 }
