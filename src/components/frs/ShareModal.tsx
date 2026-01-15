@@ -73,7 +73,7 @@ export default function ShareModal({
               </div>
               <p className="text-sm text-muted-foreground mt-2">
                 {isPublicVisible
-                  ? "Securely share your Future Ready Score with colleges, institutions, scholarships, and mentors."
+                  ? "Securely share your Future Readiness Score with colleges, institutions, scholarships, and mentors."
                   : "Public sharing is currently disabled in your privacy settings."}
               </p>
             </div>

@@ -20,7 +20,7 @@ const Footer = () => {
                 </span>
               </div>
               <p className="text-muted-foreground mb-6 max-w-sm">
-                Issuer and steward of the Future Ready Score framework. Building national readiness infrastructure for India's learners.
+                Issuer and steward of the Future Readiness Score framework. Building national readiness infrastructure for India's learners.
               </p>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Shield className="w-4 h-4 text-primary" />
@@ -101,7 +101,7 @@ const Footer = () => {
           {/* Disclaimer */}
           <div className="border-t border-border pt-8 mb-8">
             <p className="text-xs text-muted-foreground text-center max-w-3xl mx-auto">
-              The Future Ready Score is designed to support educational decisions, not replace human judgment. FRS does not rank, label, or exclude learners. Context is explanatory only and never penalizes scores. All data access is student-controlled and consent-driven.
+              The Future Readiness Score is designed to support educational decisions, not replace human judgment. FRS does not rank, label, or exclude learners. Context is explanatory only and never penalizes scores. All data access is student-controlled and consent-driven.
             </p>
           </div>
 

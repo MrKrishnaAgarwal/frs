@@ -26,7 +26,7 @@ const ReadinessSummary = ({
   
   // Generate dynamic band based on score
   const getScoreBand = () => {
-    if (score >= 750) return "Future-Ready";
+    if (score >= 750) return "Future-Readiness";
     if (score >= 500) return "Ready";
     if (score >= 250) return "Emerging";
     return "Developing";

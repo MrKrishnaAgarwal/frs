@@ -69,7 +69,7 @@ const FRSReport = () => {
         <title>FRS Report | {displayId} | Anvesh</title>
         <meta
           name="description"
-          content="Future Ready Score Report - A holistic readiness indicator for learning, skills, and pathways."
+          content="Future Readiness Score Report - A holistic readiness indicator for learning, skills, and pathways."
         />
         <meta name="robots" content="noindex" />
       </Helmet>
@@ -220,7 +220,7 @@ const FRSReport = () => {
                 <img src={anveshLogo} alt="Anvesh" className="w-6 h-6" />
                 <span className="font-bold text-primary">Anvesh</span>
                 <span className="mx-2">•</span>
-                <span>Issuer of the Future Ready Score</span>
+                <span>Issuer of the Future Readiness Score</span>
               </div>
               <div className="flex items-center gap-6">
                 <a href="#" className="hover:text-foreground transition-colors">

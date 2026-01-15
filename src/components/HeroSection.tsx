@@ -31,7 +31,7 @@ const HeroSection = () => {
 
           {/* Sub-headline with NRF Context */}
           <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-            <span className="text-primary font-semibold">Future Ready Score (FRS)</span> is a readiness indicator developed under the <span className="text-foreground font-semibold">NRF — National Readiness Framework</span>, enabling early, holistic learner support.
+            <span className="text-primary font-semibold">Future Readiness Score (FRS)</span> is a readiness indicator developed under the <span className="text-foreground font-semibold">NRF — National Readiness Framework</span>, enabling early, holistic learner support.
           </p>
 
           {/* CTA Buttons */}

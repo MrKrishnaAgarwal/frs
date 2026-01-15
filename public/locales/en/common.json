@@ -4,14 +4,14 @@
     "selectLanguage": "Select Language"
   },
   "report": {
-    "title": "Future Ready Score Report",
+    "title": "Future Readiness Score Report",
     "subtitle": "A holistic, longitudinal indicator of learning, skills, and career readiness.",
     "frsId": "FRS ID",
     "lastUpdated": "Last Updated",
     "consentStatus": "Consent Status"
   },
   "header": {
-    "futureReadyScore": "Future Ready Score (0–1000)",
+    "futureReadyScore": "Future Readiness Score (0–1000)",
     "holisticReadiness": "A holistic, longitudinal indicator of learning, skills, and career readiness."
   },
   "studentProfile": {
@@ -24,7 +24,7 @@
     "status": "Active"
   },
   "scoreGauge": {
-    "futureReady": "FUTURE-READY",
+    "futureReady": "FUTURE-READINESS",
     "ready": "READY",
     "emerging": "EMERGING",
     "developing": "DEVELOPING",
@@ -52,7 +52,7 @@
   "share": {
     "button": "Share FRS",
     "title": "Share Your FRS",
-    "description": "Share your Future Ready Score securely with institutions and mentors.",
+    "description": "Share your Future Readiness Score securely with institutions and mentors.",
     "descriptionDisabled": "Public sharing is currently disabled in your privacy settings.",
     "copyLink": "Copy Share Link",
     "copyLinkDesc": "Summary view only. Recipient must approve access.",
