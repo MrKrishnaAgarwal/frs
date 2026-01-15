@@ -13,6 +13,7 @@ const StudentProfile = () => {
       </h3>
 
       <div className="space-y-4">
+        {/* Name */}
         <div>
           <p className="text-2xl font-bold text-foreground">Krishna Agarwal</p>
           <div className="flex items-center gap-2 mt-1">
@@ -25,10 +26,11 @@ const StudentProfile = () => {
 
         <div className="h-px bg-border" />
 
+        {/* Details Grid */}
         <div className="space-y-3">
           <div className="flex items-center justify-between">
             <span className="text-sm text-muted-foreground">{t("studentProfile.ageClass")}</span>
-            <span className="text-sm font-medium text-foreground">16 {t("studentProfile.years")} | {t("studentProfile.class")} 10</span>
+            <span className="text-sm font-medium text-foreground">16 yrs | Class 10</span>
           </div>
 
           <div className="flex items-center justify-between">
@@ -65,21 +67,23 @@ const StudentProfile = () => {
 
         <div className="h-px bg-border" />
 
+        {/* Verification Status */}
         <div className="space-y-2">
           <div className="flex items-center gap-2 text-sm">
             <CheckCircle className="w-4 h-4 text-primary" />
-            <span className="text-muted-foreground">{t("studentProfile.schoolBoardVerified")}</span>
+            <span className="text-muted-foreground">School + Board Verified</span>
           </div>
           <div className="flex items-center gap-2 text-sm">
             <Shield className="w-4 h-4 text-primary" />
-            <span className="text-muted-foreground">{t("studentProfile.frsStatus")}</span>
+            <span className="text-muted-foreground">FRS Status: Active</span>
           </div>
         </div>
 
+        {/* Privacy Note */}
         <div className="bg-secondary/50 rounded-lg p-3 mt-4">
           <p className="text-xs text-muted-foreground flex items-start gap-2">
             <Shield className="w-4 h-4 flex-shrink-0 mt-0.5 text-primary" />
-            {t("studentProfile.privacyNote")}
+            Trust without surveillance — Identity verification ensures data integrity while protecting student privacy.
           </p>
         </div>
       </div>

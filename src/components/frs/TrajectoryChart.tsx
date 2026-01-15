@@ -3,10 +3,8 @@ import { TrendingUp, Award, Users, Briefcase, Sparkles } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-import { useTranslation } from "react-i18next";
 
 const TrajectoryChart = () => {
-  const { t } = useTranslation();
   const [ref, isVisible] = useScrollAnimation<HTMLDivElement>();
   const [animatedPoints, setAnimatedPoints] = useState(0);
   const [showMilestones, setShowMilestones] = useState(false);
@@ -21,20 +19,20 @@ const TrajectoryChart = () => {
   const milestones = [
     {
       icon: Award,
-      title: t("trajectory.skillCertificationAdded"),
-      description: t("trajectory.competencyValidation"),
+      title: "Skill certification added",
+      description: "Competency validation",
       date: "Mar 2024",
     },
     {
       icon: Users,
-      title: t("trajectory.mentorshipSessionCompleted"),
-      description: t("trajectory.guidedGrowth"),
+      title: "Mentorship session completed",
+      description: "Guided growth",
       date: "Sep 2024",
     },
     {
       icon: Briefcase,
-      title: t("trajectory.appliedProjectSubmitted"),
-      description: t("trajectory.appliedLearningEvidence"),
+      title: "Applied project submitted",
+      description: "Applied learning evidence",
       date: "Nov 2025",
     },
   ];
@@ -73,7 +71,7 @@ const TrajectoryChart = () => {
     <div ref={ref} className="bg-card border border-border rounded-lg p-6 overflow-hidden">
       <h3 className="text-xl font-bold text-foreground mb-6 flex items-center gap-2">
         <TrendingUp className="w-5 h-5 text-primary animate-pulse" />
-        {t("trajectory.title")}
+        FRS Trajectory
         <Sparkles className="w-4 h-4 text-primary/50 ml-auto animate-bounce" />
       </h3>
 
@@ -149,8 +147,8 @@ const TrajectoryChart = () => {
       )}>
         <TrendingUp className="w-5 h-5 text-primary animate-bounce" />
         <span className="text-foreground">
-          <strong className="text-primary text-xl tabular-nums">+{animatedPoints} {t("trajectory.pointsImprovement")}</strong>
-          <span className="ml-2">{t("trajectory.over2Years")}</span>
+          <strong className="text-primary text-xl tabular-nums">+{animatedPoints} points</strong>
+          <span className="ml-2">improvement over 2 years</span>
         </span>
       </div>
 
@@ -158,7 +156,7 @@ const TrajectoryChart = () => {
       <div>
         <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-4 flex items-center gap-2">
           <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-          {t("trajectory.keyMilestones")}
+          Key Milestones
         </h4>
         <div className="space-y-3">
           {milestones.map((milestone, index) => {
