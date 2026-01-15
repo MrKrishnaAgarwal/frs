@@ -9,7 +9,7 @@ interface ScoreGaugeProps {
 
 const getBandInfo = (score: number) => {
   if (score >= 750) {
-    return { band: "FUTURE-READY", color: "hsl(142, 71%, 45%)" }; // Green
+    return { band: "FUTURE-READINESS", color: "hsl(142, 71%, 45%)" }; // Green
   } else if (score >= 500) {
     return { band: "READY", color: "hsl(84, 60%, 50%)" }; // Light green
   } else if (score >= 250) {

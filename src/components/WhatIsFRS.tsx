@@ -25,7 +25,7 @@ const WhatIsFRS = () => {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              What is the <span className="text-primary">Future Ready Score?</span>
+              What is the <span className="text-primary">Future Readiness Score?</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               A single exam score captures a moment. FRS captures readiness—the complete picture of a learner's preparation for their future.

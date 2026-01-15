@@ -24,7 +24,7 @@ const FRSLitePreview = () => {
               <div className="bg-gradient-to-r from-primary/20 to-primary/5 p-6 border-b border-border">
                 <div className="flex items-center justify-between mb-4">
                   <div>
-                    <p className="text-sm text-muted-foreground mb-1">Future Ready Score</p>
+                    <p className="text-sm text-muted-foreground mb-1">Future Readiness Score</p>
                     <p className="text-xs font-mono text-muted-foreground">anvesh.ai/1284</p>
                   </div>
                   <Badge variant="outline" className="border-primary/30 text-primary">
