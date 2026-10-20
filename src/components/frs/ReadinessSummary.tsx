@@ -66,7 +66,7 @@ const ReadinessSummary = ({
 
   // Static summary text
   const getSummaryText = () => {
-    return "Krishna shows strong academic foundations with steady improvement across academics, skills, growth, and exposure, placing him in the 76th percentile. With focused exam preparation and continued project-based learning, he is well positioned for future academic and career pathways.";
+    return "Asmi Agarwal's profile reflects a foundation in computer science through her B.Tech studies at Vellore Institute of Technology, Vellore, alongside software engineering experience. Her academic background and professional exposure provide a basis for continued growth in technical problem-solving, practical application, and career development. Continued learning, hands-on projects, and demonstrated competencies can further strengthen her future readiness. A comprehensive FRS assessment should incorporate verified academic records, skills evidence, growth indicators, and enrichment activities to establish an evidence-based readiness profile.";
   };
 
   return (
